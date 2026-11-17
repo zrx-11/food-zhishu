@@ -1,0 +1,212 @@
+[
+ {
+  "check": "首页渲染",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "书卡数量",
+  "pass": true,
+  "extra": "5/5"
+ },
+ {
+  "check": "总览页：化学知枢：从零基础到大学化学的一门课",
+  "pass": true,
+  "extra": "1701 字符"
+ },
+ {
+  "check": "总览页：跨书概念映射表",
+  "pass": true,
+  "extra": "928 字符"
+ },
+ {
+  "check": "总览页：综合检验建议",
+  "pass": true,
+  "extra": "1040 字符"
+ },
+ {
+  "check": "zero-basis-chem 首章渲染",
+  "pass": true,
+  "extra": "1844 字符"
+ },
+ {
+  "check": "zero-basis-chem 末章渲染",
+  "pass": true,
+  "extra": "1772 字符"
+ },
+ {
+  "check": "general-chem 首章渲染",
+  "pass": true,
+  "extra": "1959 字符"
+ },
+ {
+  "check": "general-chem 末章渲染",
+  "pass": true,
+  "extra": "1799 字符"
+ },
+ {
+  "check": "inorganic-chem 首章渲染",
+  "pass": true,
+  "extra": "1746 字符"
+ },
+ {
+  "check": "inorganic-chem 末章渲染",
+  "pass": true,
+  "extra": "2144 字符"
+ },
+ {
+  "check": "organic-chem 首章渲染",
+  "pass": true,
+  "extra": "1622 字符"
+ },
+ {
+  "check": "organic-chem 末章渲染",
+  "pass": true,
+  "extra": "2133 字符"
+ },
+ {
+  "check": "equation-diagnosis 首章渲染",
+  "pass": true,
+  "extra": "2783 字符"
+ },
+ {
+  "check": "equation-diagnosis 末章渲染",
+  "pass": true,
+  "extra": "2783 字符"
+ },
+ {
+  "check": "zero-basis-chem 测验题数",
+  "pass": true,
+  "extra": "20 题"
+ },
+ {
+  "check": "zero-basis-chem 测验正确反馈",
+  "pass": true,
+  "extra": "✓ 正确"
+ },
+ {
+  "check": "zero-basis-chem 测验解析",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "general-chem 测验题数",
+  "pass": true,
+  "extra": "24 题"
+ },
+ {
+  "check": "general-chem 测验正确反馈",
+  "pass": true,
+  "extra": "✓ 正确"
+ },
+ {
+  "check": "general-chem 测验解析",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "inorganic-chem 测验题数",
+  "pass": true,
+  "extra": "8 题"
+ },
+ {
+  "check": "inorganic-chem 测验正确反馈",
+  "pass": true,
+  "extra": "✓ 正确"
+ },
+ {
+  "check": "inorganic-chem 测验解析",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "organic-chem 测验题数",
+  "pass": true,
+  "extra": "8 题"
+ },
+ {
+  "check": "organic-chem 测验正确反馈",
+  "pass": true,
+  "extra": "✓ 正确"
+ },
+ {
+  "check": "organic-chem 测验解析",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "equation-diagnosis 测验题数",
+  "pass": true,
+  "extra": "21 题"
+ },
+ {
+  "check": "equation-diagnosis 测验正确反馈",
+  "pass": true,
+  "extra": "✓ 正确"
+ },
+ {
+  "check": "equation-diagnosis 测验解析",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "抽认卡正面有内容",
+  "pass": true,
+  "extra": "物质怎么分类：一句话核心是什么？"
+ },
+ {
+  "check": "抽认卡翻转",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "认识计数增加",
+  "pass": true,
+  "extra": "1"
+ },
+ {
+  "check": "术语表过滤",
+  "pass": true,
+  "extra": "共8 过滤后1（纯净物）"
+ },
+ {
+  "check": "全局搜索命中",
+  "pass": true,
+  "extra": "2 条"
+ },
+ {
+  "check": "进度跨刷新持久",
+  "pass": true,
+  "extra": "《零基础入门：化学的第一套语言》 进度 30% · 已学 3/10 章 → 《零基础入门：化学的第一套语言》 进度 30% · 已学 3/10 章"
+ },
+ {
+  "check": "学习路径完成标记",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "诊断页可打开",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "深度片段（本书无，跳过）",
+  "pass": true,
+  "extra": "本书无深度片段"
+ },
+ {
+  "check": "出处脚注存在",
+  "pass": true,
+  "extra": "1 处"
+ },
+ {
+  "check": "深色模式",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "check": "控制台无错误",
+  "pass": true,
+  "extra": ""
+ }
+]

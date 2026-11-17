@@ -1,0 +1,2566 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SPSS统计分析 · 食品资料库</title><style>
+:root{--bg:#f6f7fb;--panel:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+header .inner{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header a{color:var(--accent);text-decoration:none;font-size:14px}
+header h1{font-size:18px;margin:0;flex:1;min-width:200px}
+main{max-width:1080px;margin:0 auto;padding:22px 20px 60px}
+nav.toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:22px}
+nav.toc h2{font-size:16px;margin:0 0 10px}
+nav.toc a{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);text-decoration:none;font-size:14px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:22px}
+article h2{font-size:20px;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.md h1{font-size:20px;margin:18px 0 10px}
+.md h2{font-size:18px;border:0;padding:0;margin:18px 0 8px}
+.md h3{font-size:16px;margin:16px 0 8px}
+.md p{margin:8px 0}
+.md ul,.md ol{margin:8px 0 8px 22px}
+.md table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;overflow:auto;display:block}
+.md th,.md td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+.md th{background:#f3f4f6}
+.md code{background:#f3f4f6;padding:2px 5px;border-radius:4px;font-size:13px}
+.md pre{background:#111827;color:#e5e7eb;padding:14px;border-radius:10px;overflow:auto;font-size:13px}
+.md blockquote{border-left:4px solid #93c5fd;background:#eff6ff;margin:10px 0;padding:8px 14px;color:#374151}
+.md img{max-width:100%}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0;text-decoration:none;color:var(--text)}
+.card:hover{border-color:#93c5fd;box-shadow:0 5px 18px rgba(37,99,235,.08)}
+.card b{font-size:16px;color:#1d4ed8}
+.card span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.card span.badge{display:inline-block;width:auto;margin:0 6px 0 0;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+@media(max-width:600px){main{padding:14px 12px 40px}article{padding:16px 14px}header h1{font-size:16px}nav.toc a{font-size:13px}}
+</style></head><body>
+<header><div class="inner"><a href="../26本知识库索引.html">← 资料库索引</a><h1>SPSS统计分析</h1><a href="../../index.html">主站</a></div></header>
+<main><nav class="toc"><h2>64 篇笔记</h2><a href="#n0">SPSS统计分析｜总MOC</a><a href="#n1">SPSS统计分析｜渐进学习路径</a><a href="#n2">SPSS统计分析｜关系分析｜模块MOC</a><a href="#n3">SPSS统计分析｜基础操作｜模块MOC</a><a href="#n4">SPSS统计分析｜推断分析｜模块MOC</a><a href="#n5">SPSS统计分析｜描述统计｜模块MOC</a><a href="#n6">SPSS统计分析｜综合案例｜模块MOC</a><a href="#n7">SPSS统计分析｜高级统计｜模块MOC</a><a href="#n8">SPSS统计分析｜SPSS概述</a><a href="#n9">SPSS统计分析｜数据文件建立</a><a href="#n10">SPSS统计分析｜数据文件操作</a><a href="#n11">SPSS统计分析｜基本统计分析</a><a href="#n12">SPSS统计分析｜统计图形</a><a href="#n13">SPSS统计分析｜均值比较T检验</a><a href="#n14">SPSS统计分析｜方差分析</a><a href="#n15">SPSS统计分析｜非参数检验</a><a href="#n16">SPSS统计分析｜回归分析</a><a href="#n17">SPSS统计分析｜因子分析</a><a href="#n18">SPSS统计分析｜相关分析</a><a href="#n19">SPSS统计分析｜信度与时间序列</a><a href="#n20">SPSS统计分析｜分类分析</a><a href="#n21">SPSS统计分析｜多重响应与对数线性对应</a><a href="#n22">SPSS统计分析｜生存与缺失值</a><a href="#n23">SPSS统计分析｜综合案例分析</a><a href="#n24">SPSS统计分析｜因子分析模型</a><a href="#n25">SPSS统计分析｜描述统计分析模型</a><a href="#n26">SPSS统计分析｜T检验模型</a><a href="#n27">SPSS统计分析｜信度时间序列模型</a><a href="#n28">SPSS统计分析｜回归分析模型</a><a href="#n29">SPSS统计分析｜数据文件建立模型</a><a href="#n30">SPSS统计分析｜数据文件操作模型</a><a href="#n31">SPSS统计分析｜方差分析模型</a><a href="#n32">SPSS统计分析｜相关分析模型</a><a href="#n33">SPSS统计分析｜综合案例模型</a><a href="#n34">SPSS统计分析｜聚类判别模型</a><a href="#n35">SPSS统计分析｜非参数检验模型</a><a href="#n36">SPSS统计分析｜SPSS界面</a><a href="#n37">SPSS统计分析｜变量类型</a><a href="#n38">SPSS统计分析｜数据录入</a><a href="#n39">SPSS统计分析｜数据拆分合并</a><a href="#n40">SPSS统计分析｜数据排序</a><a href="#n41">SPSS统计分析｜列联表</a><a href="#n42">SPSS统计分析｜探索分析</a><a href="#n43">SPSS统计分析｜描述统计</a><a href="#n44">SPSS统计分析｜统计图形</a><a href="#n45">SPSS统计分析｜频数分析</a><a href="#n46">SPSS统计分析｜事后比较</a><a href="#n47">SPSS统计分析｜单因素方差分析</a><a href="#n48">SPSS统计分析｜单样本T检验</a><a href="#n49">SPSS统计分析｜卡方检验</a><a href="#n50">SPSS统计分析｜多因素方差分析</a><a href="#n51">SPSS统计分析｜独立样本T检验</a><a href="#n52">SPSS统计分析｜秩和检验</a><a href="#n53">SPSS统计分析｜配对T检验</a><a href="#n54">SPSS统计分析｜偏相关</a><a href="#n55">SPSS统计分析｜因子分析</a><a href="#n56">SPSS统计分析｜皮尔逊相关</a><a href="#n57">SPSS统计分析｜线性回归</a><a href="#n58">SPSS统计分析｜逻辑回归</a><a href="#n59">SPSS统计分析｜信度分析</a><a href="#n60">SPSS统计分析｜判别分析</a><a href="#n61">SPSS统计分析｜时间序列</a><a href="#n62">SPSS统计分析｜聚类分析</a><a href="#n63">SPSS统计分析｜综合案例</a></nav><article id="n0"><div class="md"><h1>SPSS统计分析｜总MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>作者</strong>：杜强等编著
+- <strong>出版信息</strong>：计算机行业应用软件系列（人民邮电出版社）
+- <strong>内容定位</strong>：SPSS统计软件从入门到精通：数据管理、描述统计、推断分析、高级统计、综合案例
+- <strong>知识库定位</strong>：软件操作教学型知识库：以统计分析流程为模块的SPSS操作体系</p>
+</blockquote>
+<hr />
+<h2>全书结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图鸟瞰全书五级架构、核心主题与模块流转关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>全书主题索引（MOC）</h2>
+<ul>
+<li>SPSS统计分析｜基础操作｜模块MOC：概述、数据建立与操作</li>
+<li>SPSS统计分析｜描述统计｜模块MOC：基本统计分析与图形</li>
+<li>SPSS统计分析｜推断分析｜模块MOC：T检验、非参数检验、方差分析</li>
+<li>SPSS统计分析｜关系分析｜模块MOC：相关、回归、因子分析</li>
+<li>SPSS统计分析｜高级统计｜模块MOC：分类、信度、时间序列等</li>
+<li>SPSS统计分析｜综合案例｜模块MOC：综合案例分析</li>
+</ul>
+<h2>知识库使用说明</h2>
+<ul>
+<li><strong>使用对象</strong>：SPSS统计软件学习者与科研数据分析者。</li>
+<li><strong>学习方式</strong>：先数据管理后分析方法，配合综合案例。</li>
+<li><strong>标注约定</strong>：【原文补全】为资料断层补全；【外部拓展延伸】为操作技巧延伸。</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论：统计方法）：食品试验设计与统计分析｜总MOC</li>
+<li>关联类型（同主题-基础：统计原理）：概率论与数理统计｜总MOC</li>
+<li>关联类型（同主题-平行：数据分析工具）：Excel2016数据透视表｜总MOC</li>
+<li>关联类型（同主题-应用：检验数据处理）：食品检验工基础知识｜总MOC</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】专业定位：SPSS 统计分析从入门到精通——数据文件建立/操作、描述统计、推断分析（t/F/非参数）、关系分析（相关/回归）、高级统计（因子/聚类/判别/时间序列）与综合案例；是食品检验检测专业的“统计软件工具书”。</li>
+<li>【外部拓展延伸】学习线索：数据（建立/操作）→ 描述（图表/指标）→ 推断（t/F/χ²/非参数）→ 关系（相关/回归）→ 高级（因子/聚类）→ 案例（综合）——“从数据管理到高级建模”。</li>
+</ul>
+<blockquote>
+<p><strong>提示</strong> 学习提示：本书是“工具层”——与《概率论与数理统计》（理论）《食品试验设计与统计分析》（应用）构成“理论-应用-软件”铁三角；先懂方法原理再学软件操作（“知道为什么点这个按钮”）。</p>
+</blockquote></div></article><article id="n1"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜渐进学习路径</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>学习周期</strong>：系统学习（4-8周）
+- <strong>前置基础</strong>：统计学基础（见 概率论与数理统计｜总MOC）
+- <strong>最终目标</strong>：熟练用SPSS完成数据管理与各类统计分析</p>
+</blockquote>
+<hr />
+<h2>学习路径依赖图</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示各阶段前置依赖与进阶顺序：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>分阶段学习指引</h2>
+<h3>阶段一：背景认知（第1周）</h3>
+<ul>
+<li>目标：熟悉界面</li>
+<li>内容：SPSS统计分析｜SPSS概述</li>
+<li>掌握要求：界面与窗口</li>
+</ul>
+<h3>阶段二：数据管理（第2周）</h3>
+<ul>
+<li>目标：掌握数据建立与操作</li>
+<li>内容：SPSS统计分析｜数据文件建立、SPSS统计分析｜数据文件操作</li>
+<li>掌握要求：变量定义、数据整理</li>
+</ul>
+<h3>阶段三：描述统计（第3周）</h3>
+<ul>
+<li>目标：掌握描述分析</li>
+<li>内容：SPSS统计分析｜基本统计分析、SPSS统计分析｜统计图形</li>
+<li>掌握要求：频数描述探索与绘图</li>
+</ul>
+<h3>阶段四：推断分析（第4-5周）</h3>
+<ul>
+<li>目标：掌握推断方法</li>
+<li>内容：SPSS统计分析｜均值比较T检验、SPSS统计分析｜非参数检验、SPSS统计分析｜方差分析</li>
+<li>掌握要求：检验结果解读</li>
+</ul>
+<h3>阶段五：关系与高级（第6-7周）</h3>
+<ul>
+<li>目标：掌握关系与高级统计</li>
+<li>内容：SPSS统计分析｜相关分析、SPSS统计分析｜回归分析、SPSS统计分析｜因子分析、SPSS统计分析｜分类分析、SPSS统计分析｜信度与时间序列、SPSS统计分析｜多重响应与对数线性对应、SPSS统计分析｜生存与缺失值</li>
+<li>掌握要求：方法选择与输出解读</li>
+</ul>
+<h3>阶段六：综合案例（第8周）</h3>
+<ul>
+<li>目标：综合应用</li>
+<li>内容：SPSS统计分析｜综合案例分析</li>
+<li>掌握要求：完整分析报告</li>
+</ul>
+<h2>精通检验清单</h2>
+<ul>
+<li>阶段一：界面操作熟练</li>
+<li>阶段二：数据文件规范</li>
+<li>阶段三：描述结果解读正确</li>
+<li>阶段四：检验方法选择正确</li>
+<li>阶段五：高级分析输出解读</li>
+<li>阶段六：案例报告合格</li>
+</ul>
+<h2>常见问题与避坑指南</h2>
+<ul>
+<li>误区：不看统计前提直接分析</li>
+<li>误区：输出表格不会解读</li>
+<li>误区：方法选择与数据不匹配</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】成长阶段映射：在校（数据录入/描述统计）→ 上岗（检验数据整理/报告图表）→ 高级工（t/F/回归分析）→ 专家（因子/聚类等多元分析）。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控数据、方法验证数据、研发试验数据）——SPSS 是食品检验机构与研发的通用统计工具（与 Excel 互补）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习提醒：软件操作“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以《食品试验设计与统计分析》为准。</p>
+</blockquote></div></article><article id="n2"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜关系分析｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：相关、回归、因子分析
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜相关分析、SPSS统计分析｜回归分析、SPSS统计分析｜因子分析-章节</li>
+<li>三个关系模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：相关→回归→因子</li>
+<li>核心掌握目标：关系建模</li>
+<li>与后续模块关联：关系分析支撑预测与降维</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“变量建模”——关联强度（相关）与预测模型（回归）；标准曲线与品质预测。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线验证、预测模型构建——关系分析是检验定量与研发的核心工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：最小二乘/相关矩阵——回归建模的数学基础（微积分+线性代数）。</p>
+</blockquote></div></article><article id="n3"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜基础操作｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：SPSS概述、数据文件建立与操作
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜SPSS概述、SPSS统计分析｜数据文件建立、SPSS统计分析｜数据文件操作</li>
+<li>两个数据模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：概述→建立→操作</li>
+<li>核心掌握目标：数据管理</li>
+<li>与后续模块关联：数据质量决定分析质量</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件建立/操作）=“数据管理”——变量定义/清洗/变换是分析前提；“数据质量决定分析质量”。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表录入规范、指标计算（变量计算）——基础操作是检验岗位日常统计工作的主体。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“重分析轻数据”——数据录入错误（类型/编码）导致的分析失败占多数。</p>
+</blockquote></div></article><article id="n4"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜推断分析｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：T检验、非参数检验、方差分析
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜均值比较T检验、SPSS统计分析｜非参数检验、SPSS统计分析｜方差分析</li>
+<li>三个推断模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：T检验→非参数→方差</li>
+<li>核心掌握目标：方法选择与解读</li>
+<li>与后续模块关联：推断是关系分析基础</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策”——均值比较（t/F）与非参数备用；“方法选择”是核心。</li>
+<li>【外部拓展延伸】专业衔接：检验判定/方法比对/多组比较——推断是检验结论的统计依据。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提检查”（正态/方差齐）跳过是统计误用主因——SPSS 操作前先做探索分析。</p>
+</blockquote></div></article><article id="n5"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜描述统计｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：基本统计分析与图形
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜基本统计分析、SPSS统计分析｜统计图形-章节</li>
+<li>描述统计分析模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：频数描述探索→列联表→图形</li>
+<li>核心掌握目标：数据概貌</li>
+<li>与后续模块关联：描述指导方法选择</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计（频数/描述/探索/交叉）=“数据画像”——均值方差/分布形状/正态检验；“先看图”原则。</li>
+<li>【外部拓展延伸】专业衔接：报告图表（箱线图/直方图）、正态性检验（方法选择前提）——描述是检验数据分析第一步。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：描述统计用“探索”（Explore）功能最全（含正态检验）——熟练使用提升效率。</p>
+</blockquote></div></article><article id="n6"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜综合案例｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：综合案例分析
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜综合案例分析</li>
+<li>综合案例模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：案例→复现→报告</li>
+<li>核心掌握目标：完整分析流程</li>
+<li>与后续模块关联：综合全书方法</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：综合案例=“全流程实战”——数据→分析→报告闭环；模仿与创新。</li>
+<li>【外部拓展延伸】专业衔接：检验报告/研发报告的统计分析部分——案例复现是上岗前训练。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：用真实项目数据练手（质控/验证/研发）——“案例库”是专家成长的路径。</p>
+</blockquote></div></article><article id="n7"><div class="md"><p>SPSS统计分析｜总MOC</p>
+<h1>SPSS统计分析｜高级统计｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：分类、信度、时间序列、多重响应、生存等
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>SPSS统计分析｜分类分析、SPSS统计分析｜信度与时间序列、SPSS统计分析｜多重响应与对数线性对应、SPSS统计分析｜生存与缺失值</li>
+<li>两个高级模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：聚类判别→信度时间序列→其他</li>
+<li>核心掌握目标：高级方法操作</li>
+<li>与后续模块关联：高级方法供综合案例选用</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级统计（因子/聚类/判别/信度/时序）=“多元与建模进阶”——降维/分类/预测的现代工具。</li>
+<li>【外部拓展延伸】专业衔接：食品真实性（聚类判别）、综合评价（因子）、问卷（信度）——高级统计是专家级分析技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：特征分解（因子）、距离（聚类）、差分（时序）——线性代数与级数是多元统计底座。</p>
+</blockquote></div></article><article id="n8"><div class="md"><p>SPSS统计分析｜基础操作｜模块MOC</p>
+<h1>SPSS统计分析｜SPSS概述</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第1章
+- <strong>核心关键词</strong>：软件功能、界面、窗口、基本流程</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>SPSS概述</strong>。</li>
+<li>核心模型：SPSS统计分析｜数据文件建立模型</li>
+<li>核心原子：SPSS统计分析｜SPSS界面</li>
+<li>内容：SPSS功能定位（数据管理+统计分析+图形）、主要窗口（数据编辑器、输出查看器、语法编辑器）、分析基本流程（准备数据→选择方法→解读输出）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：SPSS分析的一般流程。
+解题思路：定义变量→录入/导入数据→数据预处理→选分析方法→选项设置→运行→解读输出表与图。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：数据未整理直接分析</li>
+<li>易错：忽视输出查看器保存</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜创建数据透视表</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础操作——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n9"><div class="md"><p>SPSS统计分析｜基础操作｜模块MOC</p>
+<h1>SPSS统计分析｜数据文件建立</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第2章
+- <strong>核心关键词</strong>：变量定义、数据类型、数据录入、导入</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>数据文件建立</strong>。</li>
+<li>核心模型：SPSS统计分析｜数据文件建立模型</li>
+<li>核心原子：SPSS统计分析｜变量类型、SPSS统计分析｜数据录入</li>
+<li>内容：变量视图定义（名称、类型、宽度、小数、标签、值标签、缺失值、测量尺度）、数据录入与Excel/文本导入。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：测量尺度（名义/有序/标度）的选择。
+解题思路：名义（性别）、有序（等级）、标度（数值连续）——决定可用分析方法。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：值标签未定义</li>
+<li>易错：测量尺度设置错误</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜数据源要求</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础操作——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n10"><div class="md"><p>SPSS统计分析｜基础操作｜模块MOC</p>
+<h1>SPSS统计分析｜数据文件操作</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第3章
+- <strong>核心关键词</strong>：排序、拆分、合并、转置、计算新变量</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>数据文件操作</strong>。</li>
+<li>核心模型：SPSS统计分析｜数据文件操作模型</li>
+<li>核心原子：SPSS统计分析｜数据排序、SPSS统计分析｜数据拆分合并</li>
+<li>内容：排序、拆分文件、合并（个案/变量）、转置、选择个案、计算新变量与重新编码。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：分组分析前需做什么。
+解题思路：拆分文件（按组）或选择个案（按条件）——注意分析后关闭拆分。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：拆分文件忘记关闭</li>
+<li>易错：合并键变量类型不一致</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜动态数据透视表</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础操作——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n11"><div class="md"><p>SPSS统计分析｜描述统计｜模块MOC</p>
+<h1>SPSS统计分析｜基本统计分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第4章
+- <strong>核心关键词</strong>：频数、描述、探索、列联表、OLAP</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>基本统计分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜描述统计分析模型</li>
+<li>核心原子：SPSS统计分析｜频数分析、SPSS统计分析｜描述统计、SPSS统计分析｜探索分析、SPSS统计分析｜列联表</li>
+<li>内容：频数分布、描述统计量（均值标准差）、探索分析（正态检验、离群值）、交叉列联表、OLAP与个案汇总。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：探索分析中正态性检验怎么看。
+解题思路：K-S检验P&gt;0.05可认为近似正态；同时看Q-Q图与偏度峰度。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：只看P值不看图形</li>
+<li>易错：列联表期望频数过小未注意</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜试验数据整理与特征数</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-描述统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n12"><div class="md"><p>SPSS统计分析｜描述统计｜模块MOC</p>
+<h1>SPSS统计分析｜统计图形</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第19章
+- <strong>核心关键词</strong>：条形图、直方图、箱线图、散点图、图形编辑</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>统计图形</strong>。</li>
+<li>核心模型：SPSS统计分析｜描述统计分析模型</li>
+<li>核心原子：SPSS统计分析｜统计图形</li>
+<li>内容：条形图、线图、直方图、箱线图、散点图、饼图等构建与编辑（图表构建器）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：直方图与条形图区别。
+解题思路：直方图用于连续变量分布（面积=频率），条形图用于分类变量频数比较。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：图形类型与变量类型不匹配</li>
+<li>易错：图形不标注坐标轴</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜透视表图表</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-描述统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n13"><div class="md"><p>SPSS统计分析｜推断分析｜模块MOC</p>
+<h1>SPSS统计分析｜均值比较T检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第5章
+- <strong>核心关键词</strong>：单样本、独立样本、配对T检验</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>均值比较T检验</strong>。</li>
+<li>核心模型：SPSS统计分析｜T检验模型</li>
+<li>核心原子：SPSS统计分析｜单样本T检验、SPSS统计分析｜独立样本T检验、SPSS统计分析｜配对T检验</li>
+<li>内容：三种t检验操作、Levene方差齐性检验、结果解读（t值、df、P值、均值差与置信区间）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：独立样本t检验结果如何选行。
+解题思路：先看Levene方差齐性检验——齐用第一行，不齐用第二行（校正t）。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：方差不齐仍用第一行</li>
+<li>易错：配对数据用独立样本检验</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜统计假设检验</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-推断分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n14"><div class="md"><p>SPSS统计分析｜推断分析｜模块MOC</p>
+<h1>SPSS统计分析｜方差分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第9章
+- <strong>核心关键词</strong>：单因素、多因素、协方差、事后比较</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>方差分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜方差分析模型</li>
+<li>核心原子：SPSS统计分析｜单因素方差分析、SPSS统计分析｜多因素方差分析、SPSS统计分析｜事后比较</li>
+<li>内容：单因素ANOVA（One-Way）、多因素方差分析（含交互）、协方差分析、事后多重比较选项与解读。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：多因素方差分析中交互作用如何解读。
+解题思路：交互显著（P&lt;0.05）说明因素效应互相依赖——需分别看简单效应而非只看主效应。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：交互显著仍只看主效应</li>
+<li>易错：方差齐性前提忽略</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜方差分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-推断分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n15"><div class="md"><p>SPSS统计分析｜推断分析｜模块MOC</p>
+<h1>SPSS统计分析｜非参数检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第6章
+- <strong>核心关键词</strong>：卡方检验、二项、游程、秩和检验</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>非参数检验</strong>。</li>
+<li>核心模型：SPSS统计分析｜非参数检验模型</li>
+<li>核心原子：SPSS统计分析｜卡方检验、SPSS统计分析｜秩和检验</li>
+<li>内容：卡方检验（适合性/独立性）、二项检验、游程检验、Wilcoxon秩和检验、Kruskal-Wallis检验等操作与解读。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：何时用非参数检验。
+解题思路：数据非正态、等级资料、样本小、含离群值时——分布自由但功效略低。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：正态数据用非参数（损失功效）</li>
+<li>易错：卡方期望频数条件</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜非参数检验</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-推断分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n16"><div class="md"><p>SPSS统计分析｜关系分析｜模块MOC</p>
+<h1>SPSS统计分析｜回归分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第8章
+- <strong>核心关键词</strong>：线性回归、逻辑回归、变量筛选</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>回归分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜回归分析模型</li>
+<li>核心原子：SPSS统计分析｜线性回归、SPSS统计分析｜逻辑回归</li>
+<li>内容：线性回归（进入/逐步）、共线性诊断（VIF）、残差分析；二分类逻辑回归（OR值）、模型拟合评价。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：逻辑回归结果如何解读。
+解题思路：看Exp(B)（OR值）与显著性——OR&gt;1为危险因素，P&lt;0.05显著，同时看模型Hosmer-Lemeshow拟合。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：共线性未诊断</li>
+<li>易错：逻辑回归样本量不足</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜多元线性回归与相关</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-关系分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n17"><div class="md"><p>SPSS统计分析｜关系分析｜模块MOC</p>
+<h1>SPSS统计分析｜因子分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第11章
+- <strong>核心关键词</strong>：提取因子、旋转、载荷、碎石图</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>因子分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜因子分析模型</li>
+<li>核心原子：SPSS统计分析｜因子分析</li>
+<li>内容：KMO与Bartlett检验、主成分/因子提取、旋转（最大方差）、因子载荷与命名、因子得分。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：KMO值意义。
+解题思路：KMO&gt;0.7适合因子分析（越接近1越好），Bartlett检验P&lt;0.05说明相关矩阵非单位阵。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：KMO不达标仍分析</li>
+<li>易错：因子命名脱离载荷</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-关系分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n18"><div class="md"><p>SPSS统计分析｜关系分析｜模块MOC</p>
+<h1>SPSS统计分析｜相关分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第10章
+- <strong>核心关键词</strong>：皮尔逊、斯皮尔曼、偏相关</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>相关分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜相关分析模型</li>
+<li>核心原子：SPSS统计分析｜皮尔逊相关、SPSS统计分析｜偏相关</li>
+<li>内容：Pearson（连续正态）、Spearman（秩）、Kendall、偏相关（控制第三变量）、相关矩阵解读。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：Pearson与Spearman的选择。
+解题思路：连续且近似正态用Pearson；偏态或等级数据用Spearman。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：非线性数据用Pearson</li>
+<li>易错：相关矩阵多重比较问题</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜直线回归与相关</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-关系分析——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n19"><div class="md"><p>SPSS统计分析｜高级统计｜模块MOC</p>
+<h1>SPSS统计分析｜信度与时间序列</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第14-15章
+- <strong>核心关键词</strong>：Cronbachα、ARIMA、指数平滑</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>信度与时间序列</strong>。</li>
+<li>核心模型：SPSS统计分析｜信度时间序列模型</li>
+<li>核心原子：SPSS统计分析｜信度分析、SPSS统计分析｜时间序列</li>
+<li>内容：Cronbach α信度（量表可靠性）、项目删除分析；时间序列（指数平滑、ARIMA）建模与预测。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：Cronbach α可接受标准。
+解题思路：α≥0.7可接受，0.8以上良好；删除项后α升高说明该题可考虑删除。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：量表设计缺陷用信度掩盖</li>
+<li>易错：非平稳序列直接ARIMA</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜计算字段与计算项</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-高级统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n20"><div class="md"><p>SPSS统计分析｜高级统计｜模块MOC</p>
+<h1>SPSS统计分析｜分类分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第12章
+- <strong>核心关键词</strong>：聚类分析、判别分析</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>分类分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜聚类判别模型</li>
+<li>核心原子：SPSS统计分析｜聚类分析、SPSS统计分析｜判别分析</li>
+<li>内容：K-means聚类（大样本）、层次聚类（树状图）、判别分析（Fisher/典型判别）与分类效果评价。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：K-means与层次聚类选择。
+解题思路：样本量大有明确k用K-means；小样本探索用层次聚类看树状图定类数。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：变量未标准化（量纲影响）</li>
+<li>易错：聚类数随意</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-高级统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n21"><div class="md"><p>SPSS统计分析｜高级统计｜模块MOC</p>
+<h1>SPSS统计分析｜多重响应与对数线性对应</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第7、16、17章
+- <strong>核心关键词</strong>：多重响应、对数线性、对应分析</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>多重响应、对数线性与对应分析</strong>。</li>
+<li>核心模型：SPSS统计分析｜聚类判别模型（复用）</li>
+<li>核心原子：SPSS统计分析｜列联表（复用）</li>
+<li>内容：多重响应集（多选题分析）、对数线性模型（多维列联表）、对应分析（行列类别关联可视化）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：多选题如何建立多重响应集。
+解题思路：定义变量集（二分法/分类法）后再做交叉频数——注意基数选择。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：多选题直接单变量频数</li>
+<li>易错：对应分析类别过多</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜非参数检验</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-高级统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n22"><div class="md"><p>SPSS统计分析｜高级统计｜模块MOC</p>
+<h1>SPSS统计分析｜生存与缺失值</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第13、18章
+- <strong>核心关键词</strong>：Kaplan-Meier、Cox回归、缺失值处理</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>生存分析与缺失值处理</strong>。</li>
+<li>核心模型：SPSS统计分析｜聚类判别模型（复用）</li>
+<li>核心原子：SPSS统计分析｜时间序列（复用）</li>
+<li>内容：Kaplan-Meier生存曲线、Log-rank检验、Cox比例风险回归；缺失值分析（EM、多重插补）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：Cox回归结果解读。
+解题思路：HR（风险比）&gt;1风险增加，P&lt;0.05显著——需检验比例风险假定。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：删失数据处理错误</li>
+<li>易错：缺失值直接删除（有偏）</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜多指标变量T检验和多元方差分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-高级统计——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n23"><div class="md"><p>SPSS统计分析｜综合案例｜模块MOC</p>
+<h1>SPSS统计分析｜综合案例分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第20-25章
+- <strong>核心关键词</strong>：财务危机预警、汇率、成绩评价、试卷信度、试验设计</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>综合案例分析</strong>（6个综合案例）。</li>
+<li>核心模型：SPSS统计分析｜综合案例模型</li>
+<li>核心原子：SPSS统计分析｜综合案例</li>
+<li>内容：财务危机预警（判别/逻辑回归）、汇率因素分析（回归）、成绩综合评价（因子）、办学条件聚类、试卷信度（信度分析）、多因素试验设计（方差分析）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：成绩综合评价案例的方法链。
+解题思路：KMO检验→因子分析降维→因子得分→加权综合评价排序。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：案例直接套模板不思考方法适配</li>
+<li>易错：报告缺方法与结论对应</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块6-综合案例——SPSS 软件的功能模块（数据→描述→推断→关系→高级→案例）；“工具层”与理论/应用书配套。</li>
+<li>【外部拓展延伸】专业衔接：检验数据统计分析（质控/验证/研发）的软件实现——“知道为什么点这个按钮”是正确用软件的前提。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“点按钮”简单、“选对方法”难——方法选择（检验类型/适用条件）以统计教材为准。</p>
+</blockquote></div></article><article id="n24"><div class="md"><p>SPSS统计分析｜因子分析</p>
+<h1>SPSS统计分析｜因子分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜因子分析-章节
+- <strong>核心用途</strong>：多指标降维与结构发现
+- <strong>对应原书页码</strong>：第11章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>因子分析模型</strong>：KMO/Bartlett检验 → 因子提取（特征值）→ 旋转（方差最大）→ 载荷解释命名与因子得分。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜因子分析：因子分析</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：$x_i = \sum \lambda_{ij} F_j + \varepsilon_i$——公因子解释共同变异，旋转使载荷结构简单化。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：量表结构效度、综合评价。
+- <strong>局限</strong>：解释依赖理论。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：因子分析=降维（多个指标→少数公因子）——KMO/巴特利特检验（适用性）、主成分提取、旋转（最大方差）、因子载荷/得分；“指标浓缩”。</li>
+<li>【外部拓展延伸】专业衔接：食品品质综合评价（多指标→综合得分）、消费者偏好（问卷降维）——因子分析是“多指标数据”（理化+感官）综合评估的工具（PCA 的因子分析版本）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：因子分析基于“相关矩阵特征分解”（线性代数）——与《食品试验设计与统计分析》主成分分析模型衔接；“样本量”（&gt;100 或指标 5 倍）是适用前提。</p>
+</blockquote></div></article><article id="n25"><div class="md"><p>SPSS统计分析｜基本统计分析</p>
+<h1>SPSS统计分析｜描述统计分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜基本统计分析
+- <strong>核心用途</strong>：数据概貌描述
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>描述统计分析模型</strong>：频数（分类分布）→ 描述（连续统计量）→ 探索（正态性与离群值诊断）→ 列联表（交叉关系）。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜频数分析：频数分析</li>
+<li>SPSS统计分析｜描述统计：描述统计</li>
+<li>SPSS统计分析｜探索分析：探索分析</li>
+<li>SPSS统计分析｜列联表：列联表</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：描述统计为推断方法选择提供依据——正态性决定参数/非参数路线。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：分析前的数据摸底。
+- <strong>局限</strong>：描述不替代推断。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜试验数据整理与特征数</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：描述统计=频数（分类汇总）+描述（均值/中位数/标准差/偏度峰度）+探索（正态检验/离群值箱线图）+交叉表（χ² 基础）——“先描述后推断”。</li>
+<li>【外部拓展延伸】专业衔接：检验报告“均值±SD/RSD”（描述）、质控数据趋势（探索）——描述统计是检验数据分析的第一动作，“正态性检验”（K-S/S-W）决定后续方法选择。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“均值 vs 中位数”（偏态数据用中位数）——“正态与否”决定描述与推断方法，探索分析（QQ 图）是必查项。</p>
+</blockquote></div></article><article id="n26"><div class="md"><p>SPSS统计分析｜均值比较T检验</p>
+<h1>SPSS统计分析｜T检验模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜均值比较T检验
+- <strong>核心用途</strong>：均数差异检验
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>T检验模型</strong>：确定设计类型（单样本/独立/配对）→ 选对应t检验 → 方差齐性检验（Levene）→ 解读t、df、P、置信区间。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜单样本T检验：单样本T检验</li>
+<li>SPSS统计分析｜独立样本T检验：独立样本T检验</li>
+<li>SPSS统计分析｜配对T检验：配对T检验</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：配对检验消除个体差异（自由度n-1对数），独立检验含组间变异——设计决定公式与功效。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：两组均数比较。
+- <strong>局限</strong>：多组需方差分析。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜统计假设检验</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：T 检验=单样本（与标准值比）+独立样本（两组比）+配对样本（同组前后/配对比）——“均值比较”基础；前提（正态/方差齐性 Levene）。</li>
+<li>【外部拓展延伸】专业衔接：检验结果与限量比较（单样本 t）、两方法比对（配对 t：同一批样品两种方法）、两批次比较（独立样本 t）——t 检验是检验数据判定最常用工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“配对 vs 独立”选择（同源数据必须配对）、“方差齐性”（Levene 显著时用校正 t）——“前提检查”是 SPSS 操作前的统计判断。</p>
+</blockquote></div></article><article id="n27"><div class="md"><p>SPSS统计分析｜信度与时间序列</p>
+<h1>SPSS统计分析｜信度时间序列模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜信度与时间序列
+- <strong>核心用途</strong>：量表质量与时序预测
+- <strong>对应原书页码</strong>：第14-15章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>信度时间序列模型</strong>：Cronbach α与项目分析（量表）→ 时序平稳化（差分）→ 模型识别（ACF/PACF）→ ARIMA/指数平滑拟合预测。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜信度分析：信度分析</li>
+<li>SPSS统计分析｜时间序列：时间序列</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：$\alpha = \frac{{k}}{{k-1}}\left(1 - \frac{{\sum s_i^2}}{{s_t^2}}\right)$；ARIMA(p,d,q)经d阶差分后拟合AR与MA项。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：问卷质量检验、销售预测。
+- <strong>局限</strong>：时序需足够长度。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜计算字段与计算项</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：信度分析（Cronbach α：量表一致性）+时间序列（趋势/季节/ARIMA 预测）——“测量可靠性”与“时序预测”两类高级应用。</li>
+<li>【外部拓展延伸】专业衔接：消费者问卷（信度 α≥0.7）、质量趋势监测（时间序列：不合格率趋势）、市场预测——信度是“调查类检验”（感官/消费）数据质量保障。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：ARIMA（差分/自回归/移动平均）是“随机过程”应用——“平稳性”（单位根）是时序建模前提，属高数（级数/差分）延伸。</p>
+</blockquote></div></article><article id="n28"><div class="md"><p>SPSS统计分析｜回归分析</p>
+<h1>SPSS统计分析｜回归分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜回归分析
+- <strong>核心用途</strong>：因变量预测与影响分析
+- <strong>对应原书页码</strong>：第8章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>回归分析模型</strong>：连续因变量用线性回归、二分类用逻辑回归 → 变量筛选（逐步）→ 诊断（共线性VIF、残差）→ 解读系数与拟合。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜线性回归：线性回归</li>
+<li>SPSS统计分析｜逻辑回归：逻辑回归</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：线性回归最小二乘估计；逻辑回归极大似然估计 $\ln\frac{{p}}{{1-p}} = \beta_0 + \beta x$。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：预测与因素分析。
+- <strong>局限</strong>：共线性与过拟合风险。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜多元线性回归与相关</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：回归分析=线性（一元/多元：Enter/Stepwise）+曲线估计（非线性）+逻辑回归（分类结果）——“变量关系建模与预测”；诊断（共线性 VIF/残差）。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线（一元回归：线性范围验证）、品质预测模型（多元）、货架期建模——回归是检验定量与研发预测的核心工具（“决定系数 r²≥0.999”是方法验收标准）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：回归诊断（残差分析/共线性）是“模型有效性”保障——“过拟合”（变量过多）与“共线性”（VIF&gt;10）是建模常见陷阱。</p>
+</blockquote></div></article><article id="n29"><div class="md"><p>SPSS统计分析｜数据文件建立</p>
+<h1>SPSS统计分析｜数据文件建立模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜数据文件建立
+- <strong>核心用途</strong>：SPSS数据文件构建
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>数据文件建立模型</strong>：变量规划（研究问题→变量清单）→ 变量定义（类型/标签/尺度）→ 数据录入或导入 → 质量检查。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜SPSS界面：SPSS界面</li>
+<li>SPSS统计分析｜变量类型：变量类型</li>
+<li>SPSS统计分析｜数据录入：数据录入</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：变量定义决定后续可用方法——测量尺度（名义/有序/标度）与分析模型严格对应。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：一切SPSS分析的起点。
+- <strong>局限</strong>：复杂数据结构需变换。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜数据源要求</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：数据文件=变量视图（名称/类型/测量尺度）+数据视图（记录）——“变量类型”（数值/字符串/日期）与“测量尺度”（名义/有序/连续）设置决定后续分析选项。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表（样品编号/指标/结果）录入规范——“变量命名与编码”（如等级 1/2/3）直接影响分析正确性；“数据字典”意识是数据管理第一步。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“测量尺度”设错（连续设成名义）导致可用分析受限——“数据准备”占统计工作 50% 以上。</p>
+</blockquote></div></article><article id="n30"><div class="md"><p>SPSS统计分析｜数据文件操作</p>
+<h1>SPSS统计分析｜数据文件操作模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜数据文件操作
+- <strong>核心用途</strong>：数据整理与变换
+- <strong>对应原书页码</strong>：第3章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>数据文件操作模型</strong>：排序/选择个案 → 拆分文件（分组）→ 合并（个案/变量）与转置 → 计算新变量与重新编码。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜数据排序：数据排序</li>
+<li>SPSS统计分析｜数据拆分合并：数据拆分合并</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：数据变换（编码、计算）保证变量口径与分析要求一致——错误变换导致系统性偏差。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：数据预处理。
+- <strong>局限</strong>：变换需记录日志。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：Excel2016数据透视表｜动态数据透视表</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：数据操作=排序/筛选/合并/拆分/计算新变量/转置——“数据清洗与变换”是分析前必经步骤。</li>
+<li>【外部拓展延伸】专业衔接：检验数据清洗（缺失值/离群值处理：剔除/替换/保留标注）、新变量计算（RSD=SD/均值）——“计算变量”功能是检验指标（如回收率）计算利器。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“离群值直接删”（应结合统计检验 Grubbs+专业判断）——数据操作须留痕（记录清洗规则）保证可追溯。</p>
+</blockquote></div></article><article id="n31"><div class="md"><p>SPSS统计分析｜方差分析</p>
+<h1>SPSS统计分析｜方差分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜方差分析
+- <strong>核心用途</strong>：多组均数比较
+- <strong>对应原书页码</strong>：第9章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>方差分析模型</strong>：确定设计（单/多因素、协变量）→ 设置模型（主效应/交互）→ 前提检验（正态、齐性）→ F检验显著后事后比较。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜单因素方差分析：单因素方差分析</li>
+<li>SPSS统计分析｜多因素方差分析：多因素方差分析</li>
+<li>SPSS统计分析｜事后比较：事后比较</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：多因素模型 $y = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + e$——交互显著则简单效应分析优先于主效应。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：多组比较与多因素试验。
+- <strong>局限</strong>：交互复杂时解读困难。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜方差分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：方差分析=单因素（One-way：组间比较）+多因素（两因素交互）+事后多重比较（LSD/Tukey/S-N-K）——“多组均值比较”。</li>
+<li>【外部拓展延伸】专业衔接：多工艺/多配方比较（ANOVA+字母标注 a/b/c）——食品研发报告标准表达；“交互作用”（两因素）在配方设计（如温度×时间）中关键。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“先 ANOVA 后多重比较”顺序（ANOVA 不显著则不做两两）、“事后方法选择”——统计流程规范是论文与报告审查重点。</p>
+</blockquote></div></article><article id="n32"><div class="md"><p>SPSS统计分析｜相关分析</p>
+<h1>SPSS统计分析｜相关分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜相关分析
+- <strong>核心用途</strong>：变量关联强度度量
+- <strong>对应原书页码</strong>：第10章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>相关分析模型</strong>：按变量类型选系数（连续正态Pearson/秩Spearman）→ 计算相关矩阵 → 显著性检验 → 结合偏相关控制混杂。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜皮尔逊相关：皮尔逊相关</li>
+<li>SPSS统计分析｜偏相关：偏相关</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：$r = Cov(x,y)/(s_x s_y)$ 度量线性关联——显著性检验 $H_0: \rho = 0$。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：指标关联分析。
+- <strong>局限</strong>：非线性关联不敏感。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜直线回归与相关</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：相关分析=Pearson（连续正态）+Spearman（秩/非正态）+Kendall（等级）+偏相关（控制变量）——“变量关联强度”。</li>
+<li>【外部拓展延伸】专业衔接：指标间关联（含量-品质、加工参数-产品指标）初探——“相关矩阵”是多元分析（因子/PCA）前置；“相关≠因果”是报告表述铁律。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“Pearson vs Spearman”选择（正态与线性要求）、“相关系数”解读（|r|&gt;0.8 强相关）——“方法匹配”是统计分析正确性核心。</p>
+</blockquote></div></article><article id="n33"><div class="md"><p>SPSS统计分析｜综合案例分析</p>
+<h1>SPSS统计分析｜综合案例模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜综合案例分析
+- <strong>核心用途</strong>：真实问题完整分析
+- <strong>对应原书页码</strong>：第20-25章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>综合案例模型</strong>：问题界定（研究目标）→ 方法设计（方法链）→ 数据准备 → 分析执行（多方法组合）→ 报告撰写（方法-结果-结论对应）。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜综合案例：综合案例</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：综合案例=统计流程的完整闭环——方法选择取决于数据特征与研究问题，而非模板套用。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：科研与业务数据分析。
+- <strong>局限</strong>：案例数据为教学简化。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：综合案例=完整数据分析流程（数据→描述→推断→建模→报告）——“统计分析的完整闭环”；案例类型（市场/质量/研发）。</li>
+<li>【外部拓展延伸】专业衔接：检验机构/研发部门的“数据报告”（方法+结果+统计图表）——案例模仿是快速上手“分析报告写作”的捷径（图表规范+结论表述）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：案例学习“先复现后创新”——用真实检验数据（质控/验证）重跑案例流程，比看教程更有效。</p>
+</blockquote></div></article><article id="n34"><div class="md"><p>SPSS统计分析｜分类分析</p>
+<h1>SPSS统计分析｜聚类判别模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜分类分析
+- <strong>核心用途</strong>：样本归类与判别
+- <strong>对应原书页码</strong>：第12章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>聚类判别模型</strong>：无监督（K-means/层次聚类找自然分组）→ 有监督（判别分析建立分类规则）→ 分类效果评价（回代、交叉验证）。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜聚类分析：聚类分析</li>
+<li>SPSS统计分析｜判别分析：判别分析</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：聚类最小化组内距离、最大化组间距离；判别函数最大化组间/组内离差比。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：市场细分、质量分级、风险预警。
+- <strong>局限</strong>：变量量纲需标准化。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜主成分分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：聚类分析（K-means/层次：距离/谱系图）=无监督分组+判别分析（已知组建判别函数）=有监督分类——“样本分类”两种路径。</li>
+<li>【外部拓展延伸】专业衔接：食品产地鉴别（元素/光谱聚类）、掺伪分类（真伪判别）、消费者分群——聚类判别是“食品真实性检验”（产地/品种/掺假）的统计工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“聚类数”选择（肘部/谱系图）、“距离度量”（欧氏/马氏）——“无监督”结果的解释需结合专业（统计给分组、专业给意义）。</p>
+</blockquote></div></article><article id="n35"><div class="md"><p>SPSS统计分析｜非参数检验</p>
+<h1>SPSS统计分析｜非参数检验模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：SPSS统计分析｜非参数检验
+- <strong>核心用途</strong>：分布自由检验
+- <strong>对应原书页码</strong>：第6章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>非参数检验模型</strong>：按数据类型与问题选方法——频数（卡方）、比例（二项）、随机性（游程）、两样本（Wilcoxon秩和）、多样本（Kruskal-Wallis）。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>SPSS统计分析｜卡方检验：卡方检验</li>
+<li>SPSS统计分析｜秩和检验：秩和检验</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：秩方法将数据转化为秩次，检验基于秩的分布——对分布形态稳健。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：非正态、等级、计数数据。
+- <strong>局限</strong>：正态数据功效低于参数法。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-理论）：食品试验设计与统计分析｜非参数检验</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：非参数检验=卡方（列联表）+Wilcoxon（配对秩）+Mann-Whitney（两组秩）+Kruskal-Wallis（多组秩）+符号检验——“分布自由”方法。</li>
+<li>【外部拓展延伸】专业衔接：等级数据（感官评分/合格等级）、非正态数据（微生物计数偏态）——非参数是检验数据“正态不满足”时的标准备选（微生物数据常用对数转换后再参数分析）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“参数/非参数”选择逻辑（先正态性检验）——“转换”（对数）vs“非参数”两条路径的取舍是数据分析进阶技能。</p>
+</blockquote></div></article><article id="n36"><div class="md"><p>SPSS统计分析｜数据文件建立模型</p>
+<h1>SPSS统计分析｜SPSS界面</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜数据文件建立模型
+- <strong>对应原书页码</strong>：第1章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>SPSS界面</strong>：数据编辑器（变量视图/数据视图）、输出查看器、语法编辑器、菜单与对话框——统计分析的操作入口。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】SPSS界面像“统计的工作台”——“数据”与“输出”分窗口，“菜单”是工具柜。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>变量视图定义、数据视图录入。</li>
+<li>输出查看器保存结果。</li>
+<li>语法窗口支持批量与复现。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜创建数据透视表：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 结果不保存。
+- 语法与菜单操作脱节。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件/数据）=“统计的入口”——变量定义与数据管理；“数据规范”决定后续一切。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表规范录入——基础操作是检验日常统计的第一技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“变量尺度”设置随意——分析选项受限且易错。</p>
+</blockquote></div></article><article id="n37"><div class="md"><p>SPSS统计分析｜数据文件建立模型</p>
+<h1>SPSS统计分析｜变量类型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜数据文件建立模型
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>变量类型</strong>：数值、字符串、日期等存储类型；<strong>测量尺度</strong>分<strong>名义</strong>（类别）、<strong>有序</strong>（等级）、<strong>标度</strong>（连续）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】变量类型像“数据的身份标签”——是“名字”（名义）、“名次”（有序）还是“尺码”（标度），决定能“做什么分析”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>名义：性别、地区。</li>
+<li>有序：等级、满意度。</li>
+<li>标度：年龄、浓度。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜总体与样本：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 测量尺度设错。
+- 字符串变量直接算均值。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件/数据）=“统计的入口”——变量定义与数据管理；“数据规范”决定后续一切。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表规范录入——基础操作是检验日常统计的第一技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“变量尺度”设置随意——分析选项受限且易错。</p>
+</blockquote></div></article><article id="n38"><div class="md"><p>SPSS统计分析｜数据文件建立模型</p>
+<h1>SPSS统计分析｜数据录入</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜数据文件建立模型
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>数据录入</strong>：在数据视图按个案（行）×变量（列）录入，或从Excel/文本/<strong>数据库</strong>导入，注意缺失值编码。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】数据录入像“填统计报表”——一行一个“人”（个案）、一列一项“事”（变量），格式统一才好“算”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>缺失值用系统缺失或指定值。</li>
+<li>文本导入注意分隔符与编码。</li>
+<li>录入后抽样核对。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜数据源要求：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 导入后类型错乱。
+- 缺失值未定义。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件/数据）=“统计的入口”——变量定义与数据管理；“数据规范”决定后续一切。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表规范录入——基础操作是检验日常统计的第一技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“变量尺度”设置随意——分析选项受限且易错。</p>
+</blockquote></div></article><article id="n39"><div class="md"><p>SPSS统计分析｜数据文件操作模型</p>
+<h1>SPSS统计分析｜数据拆分合并</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜数据文件操作模型
+- <strong>对应原书页码</strong>：第3章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>数据拆分合并</strong>：<strong>拆分文件</strong>（分组分析）、<strong>合并文件</strong>（按个案添加行/按变量添加列）、<strong>转置</strong>（行列互换）、选择个案。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】拆分合并像“数据的拼装车间”——拆开（分组）、拼接（合并）、翻转（转置），怎么“装”取决于分析需求。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>拆分分析后必须关闭。</li>
+<li>合并按键变量匹配。</li>
+<li>转置后变量名自动生成。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜创建数据透视表：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 拆分文件忘记关闭。
+- 合并键不匹配。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件/数据）=“统计的入口”——变量定义与数据管理；“数据规范”决定后续一切。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表规范录入——基础操作是检验日常统计的第一技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“变量尺度”设置随意——分析选项受限且易错。</p>
+</blockquote></div></article><article id="n40"><div class="md"><p>SPSS统计分析｜数据文件操作模型</p>
+<h1>SPSS统计分析｜数据排序</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜数据文件操作模型
+- <strong>对应原书页码</strong>：第3章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>数据排序</strong>：按一个或多个变量对个案升/降序排列——用于数据浏览、分组准备与异常发现。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】数据排序像“给名单排座次”——按“高矮”排好，“最高最矮”一眼可见。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>多关键字排序分主次。</li>
+<li>排序不改变个案对应关系。</li>
+<li>常用于Split File前整理。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜排序筛选：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 排序破坏对应（同记录多行）。
+- 排序后忘恢复原序。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础操作（文件/数据）=“统计的入口”——变量定义与数据管理；“数据规范”决定后续一切。</li>
+<li>【外部拓展延伸】专业衔接：检验数据表规范录入——基础操作是检验日常统计的第一技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“变量尺度”设置随意——分析选项受限且易错。</p>
+</blockquote></div></article><article id="n41"><div class="md"><p>SPSS统计分析｜描述统计分析模型</p>
+<h1>SPSS统计分析｜列联表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜描述统计分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>列联表</strong>：两个分类变量的<strong>交叉频数表</strong>，可输出行/列百分比、期望频数与<strong>卡方检验</strong>——类别关系分析。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】列联表像“两个分类变量的交叉盘点”——“行类”与“列类”交叉处“人数”一目了然。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>可附加卡方、Phi、Cramer V。</li>
+<li>期望频数&lt;5注意校正。</li>
+<li>百分比方向（行/列）按研究问题选。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜非参数检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 百分比方向看错。
+- 卡方条件不满足。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计=“数据画像”——图表与指标概括数据；正态检验为推断铺路。</li>
+<li>【外部拓展延伸】专业衔接：报告图表与均值±SD——描述是检验报告的第一部分。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：探索分析（Explore）全掌握——含离群值/正态/稳健统计。</p>
+</blockquote></div></article><article id="n42"><div class="md"><p>SPSS统计分析｜描述统计分析模型</p>
+<h1>SPSS统计分析｜探索分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜描述统计分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>探索分析</strong>：数据诊断工具——<strong>正态性检验</strong>（K-S/S-W）、箱线图找<strong>离群值</strong>、茎叶图与Q-Q图、稳健统计量。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】探索分析像“数据的体检报告”——查“正不正常”（正态）、“有没有怪人”（离群值）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>正态性P&gt;0.05近似正态。</li>
+<li>箱线图外点=潜在离群值。</li>
+<li>为后续方法选择提供依据。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜正态分布：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 小样本S-W比K-S可靠。
+- 离群值直接删（需判断）。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计=“数据画像”——图表与指标概括数据；正态检验为推断铺路。</li>
+<li>【外部拓展延伸】专业衔接：报告图表与均值±SD——描述是检验报告的第一部分。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：探索分析（Explore）全掌握——含离群值/正态/稳健统计。</p>
+</blockquote></div></article><article id="n43"><div class="md"><p>SPSS统计分析｜描述统计分析模型</p>
+<h1>SPSS统计分析｜描述统计</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜描述统计分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>描述统计</strong>：连续变量的<strong>均值、标准差、极值、方差、偏度峰度</strong>等统计量——集中趋势与离散程度总览。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】描述统计像“连续数据的数字快照”——中心（均值）、散度（标准差）、形状（偏度峰度）三拍定“长相”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>可同时输出多个统计量。</li>
+<li>Z标准化选项。</li>
+<li>偏度峰度辅助正态判断。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜平均数：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 统计量选项理解不清。
+- 不看缺失情况。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计=“数据画像”——图表与指标概括数据；正态检验为推断铺路。</li>
+<li>【外部拓展延伸】专业衔接：报告图表与均值±SD——描述是检验报告的第一部分。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：探索分析（Explore）全掌握——含离群值/正态/稳健统计。</p>
+</blockquote></div></article><article id="n44"><div class="md"><p>SPSS统计分析｜描述统计分析模型</p>
+<h1>SPSS统计分析｜统计图形</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜描述统计分析模型
+- <strong>对应原书页码</strong>：第19章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>统计图形</strong>：条形图、直方图、箱线图、散点图、线图等——数据可视化与结果呈现。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】统计图形像“数据的可视化翻译”——把数字“翻译”成图，“一眼看懂”分布与关系。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>图形类型与变量匹配。</li>
+<li>图形编辑（标题、坐标轴）。</li>
+<li>导出高分辨率图片。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜透视表图表：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 图表滥用3D效果。
+- 坐标轴无标签。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计=“数据画像”——图表与指标概括数据；正态检验为推断铺路。</li>
+<li>【外部拓展延伸】专业衔接：报告图表与均值±SD——描述是检验报告的第一部分。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：探索分析（Explore）全掌握——含离群值/正态/稳健统计。</p>
+</blockquote></div></article><article id="n45"><div class="md"><p>SPSS统计分析｜描述统计分析模型</p>
+<h1>SPSS统计分析｜频数分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜描述统计分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>频数分析</strong>：分类变量各取值的<strong>频数与百分比</strong>分布，含条形图/饼图——描述类别数据的全貌。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】频数分析像“类别数据的点人数”——每类“多少人”（频数）、“占几成”（百分比）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>可输出累计百分比。</li>
+<li>缺失值单独统计。</li>
+<li>适合名义与有序变量。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜频数分布：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 百分比基数混淆（含缺失）。
+- 连续变量硬做频数。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：描述统计=“数据画像”——图表与指标概括数据；正态检验为推断铺路。</li>
+<li>【外部拓展延伸】专业衔接：报告图表与均值±SD——描述是检验报告的第一部分。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：探索分析（Explore）全掌握——含离群值/正态/稳健统计。</p>
+</blockquote></div></article><article id="n46"><div class="md"><p>SPSS统计分析｜方差分析模型</p>
+<h1>SPSS统计分析｜事后比较</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜方差分析模型
+- <strong>对应原书页码</strong>：第9章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>事后比较</strong>：方差分析显著后对组间差异的精细比较——<strong>LSD、Bonferroni、Tukey、Dunnett、S-N-K</strong>等，控制多重比较错误率。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】事后比较像“总判决后的逐组对质”——F说“有差”，事后比较说“差在哪几组”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>LSD敏感但控制弱。</li>
+<li>Dunnett适合vs对照。</li>
+<li>S-N-K输出同质子集。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜多重比较：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 比较方法选错影响结论。
+- F不显著仍事后比较。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n47"><div class="md"><p>SPSS统计分析｜方差分析模型</p>
+<h1>SPSS统计分析｜单因素方差分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜方差分析模型
+- <strong>对应原书页码</strong>：第9章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>单因素方差分析</strong>：比较<strong>一个因素多水平</strong>（≥3组）的均值——One-Way ANOVA，F检验组间效应，后接多重比较。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】单因素方差分析像“多个组别的集体裁判”——一次F“总评”，省去两两t检验的“车轮战”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>组数≥3。</li>
+<li>齐性检验（Levene）。</li>
+<li>显著后LSD/Tukey等比较。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜方差分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 两组也用ANOVA（等效但绕）。
+- 不做事后比较。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n48"><div class="md"><p>SPSS统计分析｜T检验模型</p>
+<h1>SPSS统计分析｜单样本T检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜T检验模型
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>单样本T检验</strong>：检验样本均值与<strong>已知总体均值</strong>的差异——$t = \frac{{\bar x - \mu_0}}{{s/\sqrt{{n}}}}$。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】单样本t检验像“把自家成绩和全国平均比”——“差多少”除以“波动”，够大就“不一般”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>需输入检验值μ₀。</li>
+<li>输出t、df、P与置信区间。</li>
+<li>正态性前提。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜t检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 检验值输入错误。
+- 小样本不正态硬用。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n49"><div class="md"><p>SPSS统计分析｜非参数检验模型</p>
+<h1>SPSS统计分析｜卡方检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜非参数检验模型
+- <strong>对应原书页码</strong>：第6章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>卡方检验</strong>：比较<strong>观察频数</strong>与<strong>期望频数</strong>——适合性检验（单分类）与独立性检验（列联表），$\chi^2 = \sum\frac{{(O-E)^2}}{{E}}$。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】卡方检验像“频数的对账”——实际“账单”（O）和理论“账单”（E）差太多，就“有问题”（有关联）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>期望频数&lt;5需校正/合并。</li>
+<li>2×2表用连续校正或Fisher。</li>
+<li>自由度=(r-1)(c-1)。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜非参数检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 期望频数条件忽略。
+- 卡方用于连续数据。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n50"><div class="md"><p>SPSS统计分析｜方差分析模型</p>
+<h1>SPSS统计分析｜多因素方差分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜方差分析模型
+- <strong>对应原书页码</strong>：第9章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>多因素方差分析</strong>：两个及以上因素的方差分析——检验<strong>主效应与交互效应</strong>，可含协变量（协方差分析ANCOVA）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】多因素方差分析像“多因素的联合审讯”——每个因素“单独问”（主效应），还要“盘问配合”（交互）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>交互显著先看简单效应。</li>
+<li>协变量需与因变量线性相关。</li>
+<li>平衡设计更稳健。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜方差分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 交互显著仍只看主效应。
+- 协变量选择随意。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n51"><div class="md"><p>SPSS统计分析｜T检验模型</p>
+<h1>SPSS统计分析｜独立样本T检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜T检验模型
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>独立样本T检验</strong>：比较两个<strong>独立组</strong>的均值差异——先<strong>Levene方差齐性检验</strong>，齐用合并方差t，不齐用校正t'。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】独立样本t检验像“两组人的成绩PK”——两组“各自波动”（方差）先“对表”（齐性），再比“均值差距”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>分组变量定义组1/组2值。</li>
+<li>Levene P&gt;0.05用第一行。</li>
+<li>样本独立是前提。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜t检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 齐性检验行选错。
+- 配对数据误用独立检验。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n52"><div class="md"><p>SPSS统计分析｜非参数检验模型</p>
+<h1>SPSS统计分析｜秩和检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜非参数检验模型
+- <strong>对应原书页码</strong>：第6章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>秩和检验</strong>：基于秩次的位置检验——<strong>两独立样本</strong>（Mann-Whitney U）、<strong>配对</strong>（Wilcoxon符号秩）、<strong>多样本</strong>（Kruskal-Wallis H）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】秩和检验像“按名次比的比赛”——不看“具体成绩”看“排名”，两组“排名总和”差太多判“有差”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>非正态/等级/离群数据适用。</li>
+<li>多样本显著后仍需两两比较。</li>
+<li>正态数据功效略低于t检验。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜秩和检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 正态数据用秩和损失信息。
+- 多样本后不做事后比较。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n53"><div class="md"><p>SPSS统计分析｜T检验模型</p>
+<h1>SPSS统计分析｜配对T检验</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜T检验模型
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>配对T检验</strong>：比较<strong>同一对象前后</strong>或<strong>配对对象</strong>的均值差异——对每对求差值，检验差值均值是否为0（自由度=n-1）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】配对t检验像“同一个人减肥前后对比”——“差值”说话，个体差异“抵消”，检验更灵敏。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>数据组织：两个变量（前/后）。</li>
+<li>差值需近似正态。</li>
+<li>功效高于独立检验（同样本量）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜t检验：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 配对数据用独立检验。
+- 差值非正态忽略。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：推断分析（t/F/非参数）=“统计决策层”——比较与检验；方法选择正确性。</li>
+<li>【外部拓展延伸】专业衔接：检验判定与多组比较——推断技能是结果解释基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“前提”（正态/方差齐）检查——SPSS 结果解读先看前提检验。</p>
+</blockquote></div></article><article id="n54"><div class="md"><p>SPSS统计分析｜相关分析模型</p>
+<h1>SPSS统计分析｜偏相关</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜相关分析模型
+- <strong>对应原书页码</strong>：第10章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>偏相关</strong>：<strong>控制第三个（或多个）变量</strong>后两变量的相关——排除混杂变量的“伪相关”。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】偏相关像“剔除噪音后的纯净相关”——把“第三者”的影响“按住”，再看两人的“真关系”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>控制变量需指定。</li>
+<li>结果解释：净相关。</li>
+<li>控制变量选择要有理论依据。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜相关系数：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 控制变量任意。
+- 把偏相关当普通相关解读。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“建模层”——关联与预测；标准曲线核心。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线与预测模型——关系分析是检验定量主工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“相关≠因果”——报告表述严谨性。</p>
+</blockquote></div></article><article id="n55"><div class="md"><p>SPSS统计分析｜因子分析模型</p>
+<h1>SPSS统计分析｜因子分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜因子分析模型
+- <strong>对应原书页码</strong>：第11章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>因子分析</strong>：用少数<strong>公因子</strong>解释多个观测变量的共同变异——降维、量表结构效度、因子得分。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】因子分析像“变量背后的隐形推手”——一堆“表面指标”背后藏着几个“共同因子”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>KMO&gt;0.7适用。</li>
+<li>旋转使载荷两极分化易解释。</li>
+<li>因子得分可用于后续分析。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜主成分分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- KMO不达标硬做。
+- 公因子方差低仍保留。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“建模层”——关联与预测；标准曲线核心。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线与预测模型——关系分析是检验定量主工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“相关≠因果”——报告表述严谨性。</p>
+</blockquote></div></article><article id="n56"><div class="md"><p>SPSS统计分析｜相关分析模型</p>
+<h1>SPSS统计分析｜皮尔逊相关</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜相关分析模型
+- <strong>对应原书页码</strong>：第10章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>皮尔逊相关</strong>：连续变量线性相关——$r = \frac{{\sum(x_i-\bar x)(y_i-\bar y)}}{{\sqrt{{\sum(x_i-\bar x)^2\sum(y_i-\bar y)^2}}}}$，范围[-1,1]。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】皮尔逊相关像“两变量的同步度”——同步升降（正）、反向（负）、“各走各”（近0）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>要求连续且近似正态。</li>
+<li>对离群值敏感。</li>
+<li>r²为决定系数。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜相关系数：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 相关≠因果。
+- 非线性关系r失真。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“建模层”——关联与预测；标准曲线核心。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线与预测模型——关系分析是检验定量主工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“相关≠因果”——报告表述严谨性。</p>
+</blockquote></div></article><article id="n57"><div class="md"><p>SPSS统计分析｜回归分析模型</p>
+<h1>SPSS统计分析｜线性回归</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜回归分析模型
+- <strong>对应原书页码</strong>：第8章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>线性回归</strong>：连续因变量与一个/多个自变量的线性模型——$y = b_0 + b_1x_1 + \cdots$，含R²、回归系数检验、共线性诊断。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】线性回归像“多因素的预测公式”——每个x“贡献”一份权重（系数），加起来“预测”y。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>逐步回归筛选变量。</li>
+<li>VIF&gt;10提示共线性。</li>
+<li>残差分析验证假设。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜直线回归与相关：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 共线性不诊断。
+- 外推预测。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“建模层”——关联与预测；标准曲线核心。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线与预测模型——关系分析是检验定量主工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“相关≠因果”——报告表述严谨性。</p>
+</blockquote></div></article><article id="n58"><div class="md"><p>SPSS统计分析｜回归分析模型</p>
+<h1>SPSS统计分析｜逻辑回归</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜回归分析模型
+- <strong>对应原书页码</strong>：第8章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>逻辑回归</strong>：<strong>二分类因变量</strong>（0/1）的回归——$\ln\frac{{p}}{{1-p}} = \beta_0 + \beta_1x_1 + \cdots$，Exp(B)=OR值。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】逻辑回归像“概率的预测器”——不直接“预测0/1”，而是“预测发生的概率”，概率超过0.5判“是”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>输出OR值（风险比）。</li>
+<li>Hosmer-Lemeshow拟合优度。</li>
+<li>样本量要求（事件数≥10×变量数）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜多元线性回归与相关：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 样本量不足。
+- OR解读方向错误。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：关系分析（相关/回归）=“建模层”——关联与预测；标准曲线核心。</li>
+<li>【外部拓展延伸】专业衔接：标准曲线与预测模型——关系分析是检验定量主工具。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“相关≠因果”——报告表述严谨性。</p>
+</blockquote></div></article><article id="n59"><div class="md"><p>SPSS统计分析｜信度时间序列模型</p>
+<h1>SPSS统计分析｜信度分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜信度时间序列模型
+- <strong>对应原书页码</strong>：第14章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>信度分析</strong>：量表<strong>内部一致性</strong>——Cronbach α系数与分半信度、删除项分析，α≥0.7可接受。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】信度分析像“量表的可靠度测试”——多题“测同一件事”，答案“齐不齐”（一致）决定量表“可信”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>α受题数与相关性影响。</li>
+<li>删除某题α升高→该题可删。</li>
+<li>效度与信度互补。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜主成分分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- α低就删题（无理论依据）。
+- 信度≠效度。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级统计（因子/聚类/判别等）=“多元分析层”——降维分类建模。</li>
+<li>【外部拓展延伸】专业衔接：真实性鉴别/综合评价——高级分析是专家技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：矩阵与距离概念——多元统计的数学基础需补。</p>
+</blockquote></div></article><article id="n60"><div class="md"><p>SPSS统计分析｜聚类判别模型</p>
+<h1>SPSS统计分析｜判别分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜聚类判别模型
+- <strong>对应原书页码</strong>：第12章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>判别分析</strong>：由已知类别的样本建立<strong>判别函数</strong>，用于新样本归类（有监督）——Fisher线性判别、典型判别。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】判别分析像“学了样板再分拣”——先“学”已知类别“长什么样”（判别函数），再“认”新样本。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>需要类别标签已知的训练集。</li>
+<li>判别函数个数=min(组数-1,变量数)。</li>
+<li>回代与交叉验证评价。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜多元线性回归与相关：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 样本量不足。
+- 变量共线性影响稳定。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级统计（因子/聚类/判别等）=“多元分析层”——降维分类建模。</li>
+<li>【外部拓展延伸】专业衔接：真实性鉴别/综合评价——高级分析是专家技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：矩阵与距离概念——多元统计的数学基础需补。</p>
+</blockquote></div></article><article id="n61"><div class="md"><p>SPSS统计分析｜信度时间序列模型</p>
+<h1>SPSS统计分析｜时间序列</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜信度时间序列模型
+- <strong>对应原书页码</strong>：第15章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>时间序列</strong>：按时间顺序观测的序列建模——<strong>平稳化</strong>（差分）、模型识别（ACF/PACF）、ARIMA/指数平滑拟合与<strong>预测</strong>。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】时间序列像“按时间轴的故事线”——找“规律”（趋势、季节、周期），“顺着规律”讲“未来”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>平稳性是ARIMA前提。</li>
+<li>ACF/PACF截尾拖尾识别。</li>
+<li>预测区间随步长增大。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>Excel2016数据透视表｜计算字段与计算项：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 非平稳直接拟合。
+- 过度差分丢失信息。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级统计（因子/聚类/判别等）=“多元分析层”——降维分类建模。</li>
+<li>【外部拓展延伸】专业衔接：真实性鉴别/综合评价——高级分析是专家技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：矩阵与距离概念——多元统计的数学基础需补。</p>
+</blockquote></div></article><article id="n62"><div class="md"><p>SPSS统计分析｜聚类判别模型</p>
+<h1>SPSS统计分析｜聚类分析</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜聚类判别模型
+- <strong>对应原书页码</strong>：第12章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>聚类分析</strong>：将样本按<strong>相似性</strong>划分为若干类（无监督）——K-means（指定类数）、层次聚类（树状图定类）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】聚类分析像“物以类聚的自动分拣”——相似的“放一堆”，不预设“标签”也能“分组”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>变量需标准化。</li>
+<li>距离度量（欧氏等）影响结果。</li>
+<li>类数确定：肘部法/树状图。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜主成分分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 变量量纲未标准化。
+- 类数随意指定。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级统计（因子/聚类/判别等）=“多元分析层”——降维分类建模。</li>
+<li>【外部拓展延伸】专业衔接：真实性鉴别/综合评价——高级分析是专家技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：矩阵与距离概念——多元统计的数学基础需补。</p>
+</blockquote></div></article><article id="n63"><div class="md"><p>SPSS统计分析｜综合案例模型</p>
+<h1>SPSS统计分析｜综合案例</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：SPSS统计分析｜综合案例模型
+- <strong>对应原书页码</strong>：第20-25章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>综合案例</strong>：财务危机预警、汇率因素分析、成绩综合评价、办学条件聚类、试卷信度、多因素试验设计——SPSS方法综合运用的教学案例。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】综合案例像“统计方法的实战演习”——一个真实问题，串起数据管理、描述、推断与建模的全链条。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>案例覆盖判别/回归/因子/聚类/信度/方差。</li>
+<li>方法选择以数据与问题为据。</li>
+<li>报告需方法-结果-结论闭环。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>食品试验设计与统计分析｜主成分分析：同主题-理论</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 套模板不思考。
+- 报告缺方法说明。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：综合案例=“实战集成”——全流程闭环训练。</li>
+<li>【外部拓展延伸】专业衔接：检验/研发报告——案例复现是上岗训练。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：真实数据练手——案例库是专家路径。</p>
+</blockquote></div></article></main></body></html>

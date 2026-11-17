@@ -1,0 +1,2170 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Excel2016数据透视表 · 食品资料库</title><style>
+:root{--bg:#f6f7fb;--panel:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+header .inner{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header a{color:var(--accent);text-decoration:none;font-size:14px}
+header h1{font-size:18px;margin:0;flex:1;min-width:200px}
+main{max-width:1080px;margin:0 auto;padding:22px 20px 60px}
+nav.toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:22px}
+nav.toc h2{font-size:16px;margin:0 0 10px}
+nav.toc a{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);text-decoration:none;font-size:14px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:22px}
+article h2{font-size:20px;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.md h1{font-size:20px;margin:18px 0 10px}
+.md h2{font-size:18px;border:0;padding:0;margin:18px 0 8px}
+.md h3{font-size:16px;margin:16px 0 8px}
+.md p{margin:8px 0}
+.md ul,.md ol{margin:8px 0 8px 22px}
+.md table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;overflow:auto;display:block}
+.md th,.md td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+.md th{background:#f3f4f6}
+.md code{background:#f3f4f6;padding:2px 5px;border-radius:4px;font-size:13px}
+.md pre{background:#111827;color:#e5e7eb;padding:14px;border-radius:10px;overflow:auto;font-size:13px}
+.md blockquote{border-left:4px solid #93c5fd;background:#eff6ff;margin:10px 0;padding:8px 14px;color:#374151}
+.md img{max-width:100%}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0;text-decoration:none;color:var(--text)}
+.card:hover{border-color:#93c5fd;box-shadow:0 5px 18px rgba(37,99,235,.08)}
+.card b{font-size:16px;color:#1d4ed8}
+.card span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.card span.badge{display:inline-block;width:auto;margin:0 6px 0 0;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+@media(max-width:600px){main{padding:14px 12px 40px}article{padding:16px 14px}header h1{font-size:16px}nav.toc a{font-size:13px}}
+</style></head><body>
+<header><div class="inner"><a href="../26本知识库索引.html">← 资料库索引</a><h1>Excel2016数据透视表</h1><a href="../../index.html">主站</a></div></header>
+<main><nav class="toc"><h2>54 篇笔记</h2><a href="#n0">Excel2016数据透视表｜总MOC</a><a href="#n1">Excel2016数据透视表｜渐进学习路径</a><a href="#n2">Excel2016数据透视表｜交互分析｜模块MOC</a><a href="#n3">Excel2016数据透视表｜基础创建｜模块MOC</a><a href="#n4">Excel2016数据透视表｜数据源扩展｜模块MOC</a><a href="#n5">Excel2016数据透视表｜综合实战｜模块MOC</a><a href="#n6">Excel2016数据透视表｜高级应用｜模块MOC</a><a href="#n7">Excel2016数据透视表｜创建数据透视表</a><a href="#n8">Excel2016数据透视表｜刷新与格式</a><a href="#n9">Excel2016数据透视表｜数据透视表布局</a><a href="#n10">Excel2016数据透视表｜切片器与日程表</a><a href="#n11">Excel2016数据透视表｜排序筛选</a><a href="#n12">Excel2016数据透视表｜计算字段与计算项</a><a href="#n13">Excel2016数据透视表｜透视表函数</a><a href="#n14">Excel2016数据透视表｜PowerPivot</a><a href="#n15">Excel2016数据透视表｜Query与OLEDB</a><a href="#n16">Excel2016数据透视表｜动态数据透视表</a><a href="#n17">Excel2016数据透视表｜复合范围与多表合并</a><a href="#n18">Excel2016数据透视表｜VBA与透视表</a><a href="#n19">Excel2016数据透视表｜图表结合</a><a href="#n20">Excel2016数据透视表｜打印</a><a href="#n21">Excel2016数据透视表｜综合应用与常见问题</a><a href="#n22">Excel2016数据透视表｜附录SQL</a><a href="#n23">Excel2016数据透视表｜交互分析模型</a><a href="#n24">Excel2016数据透视表｜创建布局模型</a><a href="#n25">Excel2016数据透视表｜动态数据模型</a><a href="#n26">Excel2016数据透视表｜多源数据模型</a><a href="#n27">Excel2016数据透视表｜综合实战模型</a><a href="#n28">Excel2016数据透视表｜计算模型</a><a href="#n29">Excel2016数据透视表｜高级自动化模型</a><a href="#n30">Excel2016数据透视表｜值汇总方式</a><a href="#n31">Excel2016数据透视表｜刷新数据</a><a href="#n32">Excel2016数据透视表｜布局调整</a><a href="#n33">Excel2016数据透视表｜数据源要求</a><a href="#n34">Excel2016数据透视表｜数据透视表概念</a><a href="#n35">Excel2016数据透视表｜行标签列标签</a><a href="#n36">Excel2016数据透视表｜透视表格式</a><a href="#n37">Excel2016数据透视表｜GETPIVOTDATA函数</a><a href="#n38">Excel2016数据透视表｜切片器</a><a href="#n39">Excel2016数据透视表｜排序</a><a href="#n40">Excel2016数据透视表｜日程表</a><a href="#n41">Excel2016数据透视表｜筛选</a><a href="#n42">Excel2016数据透视表｜计算字段</a><a href="#n43">Excel2016数据透视表｜计算项</a><a href="#n44">Excel2016数据透视表｜MicrosoftQuery</a><a href="#n45">Excel2016数据透视表｜OLEDB</a><a href="#n46">Excel2016数据透视表｜PowerPivot</a><a href="#n47">Excel2016数据透视表｜动态数据源</a><a href="#n48">Excel2016数据透视表｜复合范围</a><a href="#n49">Excel2016数据透视表｜VBA</a><a href="#n50">Excel2016数据透视表｜打印设置</a><a href="#n51">Excel2016数据透视表｜透视表图表</a><a href="#n52">Excel2016数据透视表｜SQL基础</a><a href="#n53">Excel2016数据透视表｜综合应用</a></nav><article id="n0"><div class="md"><h1>Excel2016数据透视表｜总MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>作者</strong>：Excel Home编著
+- <strong>出版信息</strong>：Excel 2016数据透视表应用大全（北京大学出版社）
+- <strong>内容定位</strong>：Excel数据透视表从入门到精通：创建布局、交互分析、计算、多源数据、动态透视表、VBA与综合应用
+- <strong>知识库定位</strong>：软件操作教学型知识库：以数据透视表功能流程为模块的操作体系</p>
+</blockquote>
+<hr />
+<h2>全书结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图鸟瞰全书五级架构、核心主题与模块流转关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>全书主题索引（MOC）</h2>
+<ul>
+<li>Excel2016数据透视表｜基础创建｜模块MOC：创建、布局、刷新与格式</li>
+<li>Excel2016数据透视表｜交互分析｜模块MOC：排序筛选、切片器、计算字段与函数</li>
+<li>Excel2016数据透视表｜数据源扩展｜模块MOC：动态透视表、多源数据、Power Pivot</li>
+<li>Excel2016数据透视表｜高级应用｜模块MOC：图表结合、VBA、打印</li>
+<li>Excel2016数据透视表｜综合实战｜模块MOC：综合应用与SQL</li>
+</ul>
+<h2>知识库使用说明</h2>
+<ul>
+<li><strong>使用对象</strong>：Excel数据透视表学习与应用者。</li>
+<li><strong>学习方式</strong>：基础→交互→数据源→高级→综合。</li>
+<li><strong>标注约定</strong>：【原文补全】为资料断层补全；【外部拓展延伸】为操作技巧延伸。</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行：数据分析工具）：SPSS统计分析｜总MOC</li>
+<li>关联类型（同主题-应用：试验数据管理）：食品试验设计与统计分析｜总MOC</li>
+<li>关联类型（同主题-基础：统计分析）：概率论与数理统计｜总MOC</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】专业定位：Excel 2016 数据透视表应用大全——透视表创建/布局/交互、多源数据、计算字段、高级自动化与综合实战；是食品检验检测专业的“数据整理与报表工具书”（检验数据汇总分析的日常主力）。</li>
+<li>【外部拓展延伸】学习线索：创建（数据准备/基础透视）→ 布局（字段/格式）→ 交互（切片器/排序筛选）→ 数据源（多表合并）→ 计算（字段/项目）→ 自动化（宏/动态）——“从透视到分析”。</li>
+</ul>
+<blockquote>
+<p><strong>提示</strong> 学习提示：Excel 透视表是检验数据“第一层分析”（汇总/分类/对比）——与 SPSS（专业统计）分工：日常报表用 Excel、科研统计用 SPSS；“透视表+统计函数”覆盖检验报告 80% 数据需求。</p>
+</blockquote></div></article><article id="n1"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜渐进学习路径</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>学习周期</strong>：系统学习（3-6周）
+- <strong>前置基础</strong>：Excel基本操作
+- <strong>最终目标</strong>：熟练创建、分析并自动化数据透视表</p>
+</blockquote>
+<hr />
+<h2>学习路径依赖图</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示各阶段前置依赖与进阶顺序：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>分阶段学习指引</h2>
+<h3>阶段一：背景认知（第1周）</h3>
+<ul>
+<li>目标：理解透视表价值</li>
+<li>内容：Excel2016数据透视表｜创建数据透视表</li>
+<li>掌握要求：适用场景与数据要求</li>
+</ul>
+<h3>阶段二：核心概念（第1-2周）</h3>
+<ul>
+<li>目标：掌握核心要素</li>
+<li>内容：Excel2016数据透视表｜数据透视表布局、Excel2016数据透视表｜刷新与格式</li>
+<li>掌握要求：行列标签、值汇总</li>
+</ul>
+<h3>阶段三：基础模型（第3周）</h3>
+<ul>
+<li>目标：掌握交互分析</li>
+<li>内容：Excel2016数据透视表｜排序筛选、Excel2016数据透视表｜切片器与日程表</li>
+<li>掌握要求：交互式分析</li>
+</ul>
+<h3>阶段四：过程模型（第4-5周）</h3>
+<ul>
+<li>目标：掌握计算与数据源</li>
+<li>内容：Excel2016数据透视表｜计算字段与计算项、Excel2016数据透视表｜透视表函数、Excel2016数据透视表｜动态数据透视表、Excel2016数据透视表｜复合范围与多表合并、Excel2016数据透视表｜Query与OLEDB、Excel2016数据透视表｜PowerPivot</li>
+<li>掌握要求：计算与多源数据</li>
+</ul>
+<h3>阶段五：综合实战（第6周）</h3>
+<ul>
+<li>目标：高级与综合应用</li>
+<li>内容：Excel2016数据透视表｜图表结合、Excel2016数据透视表｜VBA与透视表、Excel2016数据透视表｜打印、Excel2016数据透视表｜综合应用与常见问题、Excel2016数据透视表｜附录SQL</li>
+<li>掌握要求：自动化与综合报告</li>
+</ul>
+<h2>精通检验清单</h2>
+<ul>
+<li>阶段一：透视表应用场景清晰</li>
+<li>阶段二：布局与格式操作熟练</li>
+<li>阶段三：交互分析流畅</li>
+<li>阶段四：计算与多源数据正确</li>
+<li>阶段五：综合报告合格</li>
+</ul>
+<h2>常见问题与避坑指南</h2>
+<ul>
+<li>误区：数据源不规范</li>
+<li>误区：值汇总方式选错</li>
+<li>误区：刷新机制不理解</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】成长阶段映射：在校（基础透视/数据整理）→ 上岗（检验数据汇总报表）→ 初/中级工（多维度分析/质控表）→ 高级工（多源数据/自动化报表）——“报表能力”逐级。</li>
+<li>【外部拓展延伸】专业衔接：检验报告数据（批次/项目/结果汇总、合格率统计、趋势图表）——透视表是“数据到报表”的最快路径（拖拽即可）。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习提醒：透视表“数据源规范”（一维表：每列一个字段）是前提——“脏数据”（合并单元格/空行）是透视表失效主因。</p>
+</blockquote></div></article><article id="n2"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜交互分析｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：排序筛选、切片器、计算字段与函数
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>Excel2016数据透视表｜排序筛选、Excel2016数据透视表｜切片器与日程表、Excel2016数据透视表｜计算字段与计算项、Excel2016数据透视表｜透视表函数</li>
+<li>交互与计算模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：筛选→切片器→计算</li>
+<li>核心掌握目标：交互与计算</li>
+<li>与后续模块关联：分析支撑动态数据源</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析（切片器/时间线/组合）=“动态报表”——多维度钻取与联动筛选。</li>
+<li>【外部拓展延伸】专业衔接：检验数据多维分析（品类/时间/项目）——切片器仪表盘是管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：切片器+组合（日期）——“动态仪表盘”是核心技能。</p>
+</blockquote></div></article><article id="n3"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜基础创建｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：创建、布局、刷新与格式
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>Excel2016数据透视表｜创建数据透视表、Excel2016数据透视表｜数据透视表布局、Excel2016数据透视表｜刷新与格式</li>
+<li>创建布局模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：创建→布局→格式</li>
+<li>核心掌握目标：数据要求与汇总</li>
+<li>与后续模块关联：基础决定交互分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建（数据准备/创建布局）=“透视表入门”——数据规范与字段布局是全部进阶的前提。</li>
+<li>【外部拓展延伸】专业衔接：检验数据“一维表”规范录入——“数据规范”决定透视表成败。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：“脏数据”（合并/空行）直接透视——先清洗后透视是铁律。</p>
+</blockquote></div></article><article id="n4"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜数据源扩展｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：动态透视表、多源数据、Power Pivot
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>Excel2016数据透视表｜动态数据透视表、Excel2016数据透视表｜复合范围与多表合并、Excel2016数据透视表｜Query与OLEDB、Excel2016数据透视表｜PowerPivot-章节</li>
+<li>动态与多源模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：动态→多源→Power Pivot</li>
+<li>核心掌握目标：数据源管理</li>
+<li>与后续模块关联：数据源支撑高级应用</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展（多源/关系/PowerPivot）=“数据整合”——多表关联与大数据量处理。</li>
+<li>【外部拓展延伸】专业衔接：检验多表整合（台账×质控×报告）——数据模型是机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：多源是专家技能——先单表熟练再进阶。</p>
+</blockquote></div></article><article id="n5"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜综合实战｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：综合应用与SQL
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>Excel2016数据透视表｜综合应用与常见问题、Excel2016数据透视表｜附录SQL</li>
+<li>综合实战模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：综合→SQL</li>
+<li>核心掌握目标：完整方案</li>
+<li>与后续模块关联：全书方法整合</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：综合实战=“报表全流程”——数据→透视→图表→仪表盘集成。</li>
+<li>【外部拓展延伸】专业衔接：质量月报仪表盘——透视表组合是管理报表标准形态。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：真实数据复现案例——实战是成长捷径。</p>
+</blockquote></div></article><article id="n6"><div class="md"><p>Excel2016数据透视表｜总MOC</p>
+<h1>Excel2016数据透视表｜高级应用｜模块MOC</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>模块定位</strong>：图表结合、VBA、打印
+- <strong>前置知识</strong>：对应章节与前一模块内容
+- <strong>对应原书页码</strong>：见各章节笔记元信息</p>
+</blockquote>
+<hr />
+<h2>本模块结构总览</h2>
+<blockquote>
+<p>以下 Mermaid 框图呈现模块内章节、模型与核心概念的层级关联：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>本模块主题索引</h2>
+<ul>
+<li>Excel2016数据透视表｜图表结合、Excel2016数据透视表｜VBA与透视表、Excel2016数据透视表｜打印</li>
+<li>高级自动化模型</li>
+</ul>
+<h2>模块进阶学习指引</h2>
+<ul>
+<li>学习顺序：图表→VBA→打印</li>
+<li>核心掌握目标：自动化</li>
+<li>与后续模块关联：高级技巧用于综合实战</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级应用（计算字段/宏/Power Query）=“自动化与计算”——报表内计算与流程自动化。</li>
+<li>【外部拓展延伸】专业衔接：指标计算（RSD/合格率）+报表自动化——“一键报表”释放重复劳动。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：描述统计计算——透视表计算字段是统计应用的日常工具。</p>
+</blockquote></div></article><article id="n7"><div class="md"><p>Excel2016数据透视表｜基础创建｜模块MOC</p>
+<h1>Excel2016数据透视表｜创建数据透视表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第1章
+- <strong>核心关键词</strong>：数据源要求、创建步骤、字段列表</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>创建数据透视表</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜创建布局模型</li>
+<li>核心原子：Excel2016数据透视表｜数据透视表概念、Excel2016数据透视表｜数据源要求</li>
+<li>内容：数据透视表概念与适用场景、数据源要求（规范一维表）、创建步骤（插入→选择数据→设置字段）、字段列表使用。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：数据源为什么必须是一维表？
+解题思路：透视表按“行-列-值”三维结构聚合——二维交叉表无法正确识别字段。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：数据源含合并单元格</li>
+<li>易错：字段类型不统一</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件建立</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础创建——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n8"><div class="md"><p>Excel2016数据透视表｜基础创建｜模块MOC</p>
+<h1>Excel2016数据透视表｜刷新与格式</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第3章
+- <strong>核心关键词</strong>：刷新、数据源更改、透视表样式、数字格式</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>刷新与格式</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜创建布局模型</li>
+<li>核心原子：Excel2016数据透视表｜刷新数据、Excel2016数据透视表｜透视表格式</li>
+<li>内容：手动/自动刷新、打开时刷新、数据源区域更改、透视表样式与数字格式、列宽与行高保持。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：数据更新后透视表不变。
+解题思路：透视表是“快照”——需右键“刷新”或设“打开文件时刷新”。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：忘记刷新直接取数</li>
+<li>易错：新增行未纳入数据源</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件操作</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础创建——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n9"><div class="md"><p>Excel2016数据透视表｜基础创建｜模块MOC</p>
+<h1>Excel2016数据透视表｜数据透视表布局</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第2章
+- <strong>核心关键词</strong>：行标签、列标签、值、筛选区</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>数据透视表布局</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜创建布局模型</li>
+<li>核心原子：Excel2016数据透视表｜行标签列标签、Excel2016数据透视表｜值汇总方式、Excel2016数据透视表｜布局调整</li>
+<li>内容：四个区域（行/列/值/筛选）的设置、值汇总方式（求和、计数、平均等）、报表布局（压缩/大纲/表格）与设计。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：值汇总方式如何选择。
+解题思路：数值字段默认求和；文本字段自动计数；“值字段设置”可改平均/最大最小等。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：计数与求和的字段不匹配</li>
+<li>易错：行列拖放位置颠倒</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜基本统计分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块1-基础创建——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n10"><div class="md"><p>Excel2016数据透视表｜交互分析｜模块MOC</p>
+<h1>Excel2016数据透视表｜切片器与日程表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第5章
+- <strong>核心关键词</strong>：切片器、日程表、多表联动</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>切片器与日程表</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜交互分析模型</li>
+<li>核心原子：Excel2016数据透视表｜切片器、Excel2016数据透视表｜日程表</li>
+<li>内容：切片器（可视化筛选按钮）、日程表（日期区间筛选）、多切片器组合筛选、切片器连接多张透视表。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：切片器与普通筛选的区别。
+解题思路：切片器是可见的交互控件——支持多选、多表联动，适合仪表板场景。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：切片器样式与格式</li>
+<li>易错：日程表字段需为日期类型</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜统计图形</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-交互分析——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n11"><div class="md"><p>Excel2016数据透视表｜交互分析｜模块MOC</p>
+<h1>Excel2016数据透视表｜排序筛选</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第4章
+- <strong>核心关键词</strong>：字段排序、值排序、筛选、前N项</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>排序筛选</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜交互分析模型</li>
+<li>核心原子：Excel2016数据透视表｜排序、Excel2016数据透视表｜筛选</li>
+<li>内容：按标签/值排序、手动排序、行/列字段筛选、值筛选（前10项、大于等）、搜索筛选。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：按值排序与按标签排序区别。
+解题思路：按“值”排序以汇总结果为依据（如销售额降序），按标签按文本/日期。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：筛选后合计仍含隐藏项</li>
+<li>易错：前N项设置与汇总行矛盾</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据排序</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-交互分析——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n12"><div class="md"><p>Excel2016数据透视表｜交互分析｜模块MOC</p>
+<h1>Excel2016数据透视表｜计算字段与计算项</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第6章
+- <strong>核心关键词</strong>：计算字段、计算项、求解次序</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>计算字段与计算项</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜计算模型</li>
+<li>核心原子：Excel2016数据透视表｜计算字段、Excel2016数据透视表｜计算项</li>
+<li>内容：计算字段（基于字段的公式，如利润率=利润/销售额）、计算项（基于项）、字段与项的求解次序、注意事项。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：计算字段与计算项区别。
+解题思路：计算字段在字段层面（整列参与），计算项在项层面（某字段的部分项）——作用范围不同。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：计算字段公式引用方式</li>
+<li>易错：求解次序影响结果</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜计算变量</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-交互分析——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n13"><div class="md"><p>Excel2016数据透视表｜交互分析｜模块MOC</p>
+<h1>Excel2016数据透视表｜透视表函数</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第7章
+- <strong>核心关键词</strong>：GETPIVOTDATA、引用、汇总</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>透视表函数</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜计算模型</li>
+<li>核心原子：Excel2016数据透视表｜GETPIVOTDATA函数</li>
+<li>内容：GETPIVOTDATA函数语法与参数（透视表引用、字段、项）、自动生成与手动书写、在其他公式中引用透视表数据。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：单元格直接=引用透视表为何生成GETPIVOTDATA。
+解题思路：Excel自动用该函数保证引用随透视表更新——可关闭（生成GetPivotData选项）改用普通引用。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：引用区域随布局变化失效</li>
+<li>易错：参数项名称写错</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜描述统计</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块2-交互分析——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n14"><div class="md"><p>Excel2016数据透视表｜数据源扩展｜模块MOC</p>
+<h1>Excel2016数据透视表｜PowerPivot</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第12章
+- <strong>核心关键词</strong>：数据模型、关系、DAX、大数据量</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>Power Pivot</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜多源数据模型</li>
+<li>核心原子：Excel2016数据透视表｜PowerPivot</li>
+<li>内容：Power Pivot数据模型（内存列存储、大数据量）、表间关系、DAX公式（度量值）、在透视表中使用。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：Power Pivot与普通透视表差异。
+解题思路：Power Pivot在内存中建数据模型，支持多表关系与DAX计算——适合大数据量与复杂模型。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：关系方向设定</li>
+<li>易错：DAX上下文理解</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据模型</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-数据源扩展——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n15"><div class="md"><p>Excel2016数据透视表｜数据源扩展｜模块MOC</p>
+<h1>Excel2016数据透视表｜Query与OLEDB</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第10-11章
+- <strong>核心关键词</strong>：Microsoft Query、OLE DB、外部数据</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>Microsoft Query与OLE DB</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜多源数据模型</li>
+<li>核心原子：Excel2016数据透视表｜MicrosoftQuery、Excel2016数据透视表｜OLEDB</li>
+<li>内容：从外部数据库（Access、SQL Server等）取数——Microsoft Query可视化查询、OLE DB连接字符串与SQL语句。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：Query与OLE DB适用场景。
+解题思路：Query适合交互式查询小数据；OLE DB适合大数据量与复杂SQL——数据量决定选择。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：连接字符串配置错误</li>
+<li>易错：SQL语句未测试</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件建立</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-数据源扩展——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n16"><div class="md"><p>Excel2016数据透视表｜数据源扩展｜模块MOC</p>
+<h1>Excel2016数据透视表｜动态数据透视表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第8章
+- <strong>核心关键词</strong>：动态数据源、定义名称、表对象</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>动态数据透视表</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜动态数据模型</li>
+<li>核心原子：Excel2016数据透视表｜动态数据源</li>
+<li>内容：数据源区域固定导致新增行失效的问题、用<strong>表对象</strong>（Ctrl+T）或定义名称（OFFSET公式）实现动态数据源。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：新增行后透视表不包含新数据。
+解题思路：将数据区域转为“表”（结构化引用）——新增行自动纳入，刷新即更新。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：OFFSET动态名称计算错误</li>
+<li>易错：表对象与普通区域混淆</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件操作</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-数据源扩展——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n17"><div class="md"><p>Excel2016数据透视表｜数据源扩展｜模块MOC</p>
+<h1>Excel2016数据透视表｜复合范围与多表合并</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第9章
+- <strong>核心关键词</strong>：多重合并、数据透视表向导、结构相同</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>复合范围与多表合并</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜多源数据模型</li>
+<li>核心原子：Excel2016数据透视表｜复合范围</li>
+<li>内容：多张结构相同的表（如多月数据）用Alt+D+P多重合并计算区域、创建“页字段”区分来源、注意事项（字段名一致）。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：多张月报表如何合并透视。
+解题思路：结构相同的多表用多重合并计算区域——生成含“页字段”（来源标识）的透视表。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：各表字段名不一致</li>
+<li>易错：合并后字段类型变化</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据拆分合并</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块3-数据源扩展——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n18"><div class="md"><p>Excel2016数据透视表｜高级应用｜模块MOC</p>
+<h1>Excel2016数据透视表｜VBA与透视表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第17章
+- <strong>核心关键词</strong>：VBA、PivotCaches、自动化</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>VBA与透视表</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜高级自动化模型</li>
+<li>核心原子：Excel2016数据透视表｜VBA</li>
+<li>内容：录制宏操作透视表、PivotCache与PivotTable对象、批量创建与刷新透视表、自动化报表。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：如何批量刷新多个透视表。
+解题思路：VBA遍历工作表所有PivotTable调用RefreshTable——宏录制+对象引用两步实现。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：对象引用错误</li>
+<li>易错：宏安全性设置</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜语法窗口</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-高级应用——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n19"><div class="md"><p>Excel2016数据透视表｜高级应用｜模块MOC</p>
+<h1>Excel2016数据透视表｜图表结合</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第15章
+- <strong>核心关键词</strong>：透视图、图表联动、仪表板</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>图表结合</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜高级自动化模型</li>
+<li>核心原子：Excel2016数据透视表｜透视表图表</li>
+<li>内容：创建数据透视图（从透视表一键生成）、图表类型选择、切片器与图表联动、仪表板搭建。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：透视图与普通图表区别。
+解题思路：透视图绑定透视表——筛选/切片器改变时图表同步更新，适合动态展示。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：图表类型与数据不匹配</li>
+<li>易错：透视表结构变化导致图表错乱</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜统计图形</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-高级应用——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n20"><div class="md"><p>Excel2016数据透视表｜高级应用｜模块MOC</p>
+<h1>Excel2016数据透视表｜打印</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第18章
+- <strong>核心关键词</strong>：打印区域、分页、重复标题</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>打印</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜高级自动化模型</li>
+<li>核心原子：Excel2016数据透视表｜打印设置</li>
+<li>内容：透视表打印页面设置、重复行标题（设置打印标题行）、分页控制、打印区域。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：多页打印时标题行重复。
+解题思路：页面布局→打印标题→顶端标题行选择透视表标题所在行。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：打印区域含隐藏字段</li>
+<li>易错：分页符位置</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜结果输出</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块4-高级应用——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n21"><div class="md"><p>Excel2016数据透视表｜综合实战｜模块MOC</p>
+<h1>Excel2016数据透视表｜综合应用与常见问题</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：第19-23章
+- <strong>核心关键词</strong>：综合案例、常见问题、性能优化</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>综合应用与常见问题</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜综合实战模型</li>
+<li>核心原子：Excel2016数据透视表｜综合应用</li>
+<li>内容：综合案例（销售分析、人事统计、财务汇总）、常见问题（刷新、字段丢失、性能慢）、大数据量优化。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：透视表运行缓慢。
+解题思路：缩小数据源、关闭自动调整列宽、用表对象限制区域、必要时用Power Pivot。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：全列引用导致卡顿</li>
+<li>易错：缓存过大未释放</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜综合案例分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-综合实战——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n22"><div class="md"><p>Excel2016数据透视表｜综合实战｜模块MOC</p>
+<h1>Excel2016数据透视表｜附录SQL</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>对应原书页码</strong>：附录A
+- <strong>核心关键词</strong>：SELECT、WHERE、GROUP BY、连接</p>
+</blockquote>
+<hr />
+<h2>本章逻辑框架</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本章知识脉络与各主题关系：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心内容梳理</h2>
+<ul>
+<li>本章为<strong>附录SQL基础</strong>。</li>
+<li>核心模型：Excel2016数据透视表｜综合实战模型</li>
+<li>核心原子：Excel2016数据透视表｜SQL基础</li>
+<li>内容：SELECT查询、WHERE过滤、GROUP BY分组聚合、ORDER BY排序、JOIN多表连接——外部数据源取数的SQL基础。</li>
+</ul>
+<h2>典型例题与应用</h2>
+<p>典型问题：GROUP BY与聚合函数配合。
+解题思路：分组字段必须在GROUP BY中列出，聚合字段用SUM/COUNT/AVG——如SELECT 类别, SUM(销售额) FROM 销售 GROUP BY 类别。</p>
+<h2>本章小结与易错点</h2>
+<ul>
+<li>易错：WHERE与HAVING混淆</li>
+<li>易错：JOIN条件错误</li>
+</ul>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件建立</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】章节模块深挖：模块5-综合实战——Excel 透视表功能模块（创建→交互→多源→自动化→实战）；检验报表的日常工具链。</li>
+<li>【外部拓展延伸】专业衔接：检验数据（批次/项目/结果）透视汇总——透视表+统计函数覆盖检验报告 80% 数据需求。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范（合并/空行）是透视表失效主因——先清洗后透视。</p>
+</blockquote></div></article><article id="n23"><div class="md"><p>Excel2016数据透视表｜排序筛选</p>
+<h1>Excel2016数据透视表｜交互分析模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜排序筛选
+- <strong>核心用途</strong>：透视结果交互探查
+- <strong>对应原书页码</strong>：第4-5章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>交互分析模型</strong>：排序（标签/值）→ 筛选（值/前N项）→ 切片器（多选、联动）→ 日程表（日期区间）——从汇总到洞察的交互链路。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜排序：排序</li>
+<li>Excel2016数据透视表｜筛选：筛选</li>
+<li>Excel2016数据透视表｜切片器：切片器</li>
+<li>Excel2016数据透视表｜日程表：日程表</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：交互控件本质是向透视表传递筛选上下文——切片器多选即多值IN条件，日程表即日期BETWEEN条件。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：仪表板与多维探查。
+- <strong>局限</strong>：切片器过多降低可读性。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜统计图形</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：交互分析=切片器（多条件联动筛选）+时间线（日期筛选）+排序筛选（Top N）+组合（日期/数值分组）——“动态报表”核心。</li>
+<li>【外部拓展延伸】专业衔接：检验数据“多维度钻取”（按品类/时间/检验员/项目）——切片器实现“一键切换视角”（如按季度/按地区看不合格率）；组合（日期按月/按季）是趋势分析基础。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“切片器连接”（多个透视表联动需连接）——“仪表盘”（多表联动）是高级报表技巧。</p>
+</blockquote></div></article><article id="n24"><div class="md"><p>Excel2016数据透视表｜创建数据透视表</p>
+<h1>Excel2016数据透视表｜创建布局模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜创建数据透视表
+- <strong>核心用途</strong>：透视表创建与布局
+- <strong>对应原书页码</strong>：第1-3章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>创建布局模型</strong>：规范数据源 → 创建透视表 → 四区布局（行/列/值/筛选）→ 刷新与格式——透视表全生命周期起点。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜数据透视表概念：数据透视表概念</li>
+<li>Excel2016数据透视表｜数据源要求：数据源要求</li>
+<li>Excel2016数据透视表｜行标签列标签：行标签列标签</li>
+<li>Excel2016数据透视表｜值汇总方式：值汇总方式</li>
+<li>Excel2016数据透视表｜布局调整：布局调整</li>
+<li>Excel2016数据透视表｜刷新数据：刷新数据</li>
+<li>Excel2016数据透视表｜透视表格式：透视表格式</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：数据源一维化是前提——透视表在内存中构建“行×列×值”三维立方体，字段维度决定聚合口径。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：一切数据汇总分析。
+- <strong>局限</strong>：数据源不规范则结果错误。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件建立</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：创建布局=数据准备（一维表/表格式）→插入透视表→字段布局（行/列/值/筛选四区）→格式设置——“拖拽式报表”核心。</li>
+<li>【外部拓展延伸】专业衔接：检验台账（批次×项目×结果）透视——行（样品/批次）列（项目）值（均值/计数）布局完成“检验结果总表”；“值字段设置”（求和/平均/计数）按指标选择。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：“值字段”默认求和——计数型数据（合格数）需改“计数”；“汇总方式”选错是报表错误常见原因。</p>
+</blockquote></div></article><article id="n25"><div class="md"><p>Excel2016数据透视表｜动态数据透视表</p>
+<h1>Excel2016数据透视表｜动态数据模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜动态数据透视表
+- <strong>核心用途</strong>：数据源自动扩展
+- <strong>对应原书页码</strong>：第8章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>动态数据模型</strong>：数据持续增长 → 用表对象（结构化引用）或定义名称（OFFSET）动态圈定数据源 → 刷新即含新数据——告别手工改区域。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜动态数据源：动态数据源</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：表对象自动扩展行区域（结构化引用），OFFSET用COUNTA计数动态定位末行——二者实现源区域自动更新。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：持续录入的台账与日志。
+- <strong>局限</strong>：OFFSET公式随数据量增加略降性能。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件操作</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：动态数据模型=数据源动态扩展（表/名称/动态区域）+透视表自动更新——“新增数据自动纳入分析”；配合 OFFSET/表对象实现。</li>
+<li>【外部拓展延伸】专业衔接：检验台账持续追加（每日新批次）——动态数据源使周报/月报“一键刷新”，无需重建透视表。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 易错点：静态区域不随数据增长自动扩展——“数据源范围”（引用整个表列）设置错误是报表数据缺失常见原因。</p>
+</blockquote></div></article><article id="n26"><div class="md"><p>Excel2016数据透视表｜复合范围与多表合并</p>
+<h1>Excel2016数据透视表｜多源数据模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜复合范围与多表合并
+- <strong>核心用途</strong>：多数据源整合
+- <strong>对应原书页码</strong>：第9-12章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>多源数据模型</strong>：多重合并计算区域（结构相同多表）→ Microsoft Query/OLE DB（外部数据库）→ Power Pivot（关系模型+DAX）——数据源扩展阶梯。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜复合范围：复合范围</li>
+<li>Excel2016数据透视表｜MicrosoftQuery：Microsoft Query</li>
+<li>Excel2016数据透视表｜OLEDB：OLE DB</li>
+<li>Excel2016数据透视表｜PowerPivot：Power Pivot</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：数据量从“工作表级”到“数据库级”再到“内存模型”——能力与复杂度同步上升。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：多表、大数据、跨库分析。
+- <strong>局限</strong>：复杂关系需Power Pivot。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜数据文件建立</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：多源数据=多表合并（数据模型/关系）+外部数据（数据库/文本）+PowerPivot（大数据）——“数据整合”进阶。</li>
+<li>【外部拓展延伸】专业衔接：检验数据分散（台账/质控/报告多表）——“数据模型”关联（样品表×项目表×结果表）实现“一表整合”；“多表透视”（跨表汇总）是检验机构数据管理进阶技能。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：“关系”（主键匹配）需规范——“多源数据”是专家级技能，先掌握单表透视再进阶。</p>
+</blockquote></div></article><article id="n27"><div class="md"><p>Excel2016数据透视表｜综合应用与常见问题</p>
+<h1>Excel2016数据透视表｜综合实战模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜综合应用与常见问题
+- <strong>核心用途</strong>：完整分析方案
+- <strong>对应原书页码</strong>：第19-23章、附录A</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>综合实战模型</strong>：需求界定 → 数据准备（清洗、一维化）→ 透视分析（布局、计算、筛选）→ 呈现（图表、切片器、打印）——完整分析闭环。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜综合应用：综合应用</li>
+<li>Excel2016数据透视表｜SQL基础：SQL基础</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：综合案例串起全功能链——数据源决定手段（SQL取数、动态源），分析决定布局（计算字段、筛选），呈现决定形式（图表、切片器）。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：销售、人事、财务等业务分析。
+- <strong>局限</strong>：综合方案需按场景裁剪。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜综合案例分析</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：综合实战=完整报表项目（数据→透视→图表→仪表盘）——“业务报表全流程”；案例（销售/库存/质量）。</li>
+<li>【外部拓展延伸】专业衔接：检验质量月报（不合格率趋势+品类分布+检验员绩效）仪表盘——“透视表+图表（柱/饼/折线）+切片器”组合是检验机构管理报表标准形态。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：“复现案例”（用检验数据重做）——实战项目是报表能力成长的捷径。</p>
+</blockquote></div></article><article id="n28"><div class="md"><p>Excel2016数据透视表｜计算字段与计算项</p>
+<h1>Excel2016数据透视表｜计算模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜计算字段与计算项
+- <strong>核心用途</strong>：透视表内计算
+- <strong>对应原书页码</strong>：第6-7章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>计算模型</strong>：计算字段（字段级公式）→ 计算项（项级）→ 求解次序 → GETPIVOTDATA函数引用——透视表内计算体系。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜计算字段：计算字段</li>
+<li>Excel2016数据透视表｜计算项：计算项</li>
+<li>Excel2016数据透视表｜GETPIVOTDATA函数：GETPIVOTDATA函数</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：计算字段在聚合后的值上运算（如利润率=利润/销售额）——不同于源表新增列（明细级）。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：比率、同比、达成率。
+- <strong>局限</strong>：计算项受字段结构限制。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜计算变量</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：计算字段/计算项=在透视表内自定义计算（公式引用字段）+字段分类汇总——“报表内计算”。</li>
+<li>【外部拓展延伸】专业衔接：检验指标计算（RSD=STDEV/AVERAGE、回收率、合格率）在透视表内实现——“计算字段”（如不合格率=不合格数/总数）直接生成分析指标。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：RSD（标准差/均值）、合格率（计数比）——“描述统计”（均值/方差）是透视表计算的应用基础，与《概率论与数理统计》数字特征衔接。</p>
+</blockquote></div></article><article id="n29"><div class="md"><p>Excel2016数据透视表｜图表结合</p>
+<h1>Excel2016数据透视表｜高级自动化模型</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属章节</strong>：Excel2016数据透视表｜图表结合
+- <strong>核心用途</strong>：可视化与自动化
+- <strong>对应原书页码</strong>：第15-18章</p>
+</blockquote>
+<hr />
+<h2>模型构成</h2>
+<blockquote>
+<p>以下 Mermaid 框图展示本模型的组成要素、输入输出与逻辑流程：</p>
+<p>Mermaid 图：请在 Obsidian 原库中查看。</p>
+</blockquote>
+<h2>核心定义与公式</h2>
+<p><strong>高级自动化模型</strong>：数据透视图（可视化联动）→ VBA（批量创建/刷新自动化）→ 打印规范——从分析到交付的自动化流程。</p>
+<h2>组成原子概念</h2>
+<ul>
+<li>Excel2016数据透视表｜透视表图表：透视表图表</li>
+<li>Excel2016数据透视表｜VBA：VBA</li>
+<li>Excel2016数据透视表｜打印设置：打印设置</li>
+</ul>
+<h2>推导过程与证明</h2>
+<blockquote>
+<p>推导：VBA通过PivotCache/PivotTable对象模型操作透视表——录制宏生成基础代码后修改参数实现批量处理。</p>
+</blockquote>
+<h2>应用场景与局限</h2>
+<p>【外部拓展延伸】
+- <strong>应用</strong>：自动化报表与仪表板。
+- <strong>局限</strong>：VBA需考虑宏安全与版本兼容。</p>
+<h2>跨书关联</h2>
+<ul>
+<li>关联类型（同主题-平行）：SPSS统计分析｜语法窗口</li>
+</ul>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】要点深挖：高级自动化=宏（VBA 录制/编辑）+动态数据源（表/名称）+Power Query（数据清洗自动化）+刷新设置——“报表自动化”。</li>
+<li>【外部拓展延伸】专业衔接：检验周报/月报“一键刷新”（数据更新→透视表自动更新）——“报表自动化”释放重复劳动；Power Query（清洗合并）是数据管理提效利器。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：宏（VBA）属编程——“录制宏”起步即可（不用手写代码）；云电脑/机构电脑宏安全设置（禁用宏）需注意。</p>
+</blockquote></div></article><article id="n30"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜值汇总方式</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>值汇总方式</strong>：值区域字段的计算方式——<strong>求和、计数、平均值、最大值、最小值、乘积、标准差</strong>等（值字段设置）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】值汇总方式像“数值的加工口味”——同一批“数”，要“总和”（求和）、“个数”（计数）还是“平均”，任选“口味”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>数值字段默认求和。</li>
+<li>文本字段自动计数。</li>
+<li>可设值显示方式（占比、差异）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜描述统计：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 文本字段强改求和。
+- 值显示方式与汇总方式混淆。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n31"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜刷新数据</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第3章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>刷新数据</strong>：源数据变更后重新聚合——右键刷新（当前表）、全部刷新（所有表）、打开文件时自动刷新、定时刷新（连接）。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】刷新数据像“报表的重新开火”——源数据“加柴”（更新）后，透视表要“再烧一次”（刷新）才出“新菜”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>透视表是快照，不自动跟随。</li>
+<li>数据透视表选项可设打开时刷新。</li>
+<li>外部连接支持定时刷新。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件操作：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 改了源数据不刷新直接交表。
+- 以为透视表实时更新。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n32"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜布局调整</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>布局调整</strong>：报表布局（压缩/大纲/表格）、分类汇总显示、行列总计开关、字段列表重排——透视表呈现形态的控制。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】布局调整像“报表的排版”——同样“内容”，“版式”（压缩/大纲/表格）不同，“看起来”大不同。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>表格布局最接近普通表。</li>
+<li>分类汇总可隐藏/置于顶部。</li>
+<li>总计可单独开关。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜结果输出：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 布局与数据混为一谈。
+- 总计算入后仍当明细。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n33"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜数据源要求</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第1章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>数据源要求</strong>：<strong>一维表</strong>（每行一个记录、每列一个字段）、首行为字段名、无合并单元格、数据类型统一。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】数据源要求像“透视表的入场券”——“票”（一维表）合格才能“入场”（创建）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>一维表：字段在列、记录在行。</li>
+<li>合并单元格导致字段识别错误。</li>
+<li>空行空列影响区域选择。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件建立：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 用二维交叉表当数据源。
+- 字段名缺失。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n34"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜数据透视表概念</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第1章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>数据透视表概念</strong>：交互式汇总工具——按<strong>行、列、值、筛选</strong>四维结构对明细数据<strong>即时聚合</strong>（求和、计数等）的动态报表。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】数据透视表像“数据的魔方”——同一堆“积木”（明细），“转”（拖字段）出不同“面”（汇总视角）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>不修改源数据，只读聚合。</li>
+<li>布局可随时拖拽调整。</li>
+<li>适合大量明细的快速汇总。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜基本统计分析：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 在源表上直接改数。
+- 把透视表当普通表格编辑。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n35"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜行标签列标签</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第2章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>行标签列标签</strong>：透视表四区中用于<strong>分组维度</strong>的区域——行标签（纵向分组）、列标签（横向分组），拖入字段即生成行列结构。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】行列标签像“透视表的地轴”——行是“横轴”、列是“纵轴”，“值”是“格子里的数”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>可多字段分层（层级分组）。</li>
+<li>字段顺序决定分组层级。</li>
+<li>行列互换改变呈现角度。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜列联表：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 层级顺序颠倒。
+- 字段拖错区域。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n36"><div class="md"><p>Excel2016数据透视表｜创建布局模型</p>
+<h1>Excel2016数据透视表｜透视表格式</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜创建布局模型
+- <strong>对应原书页码</strong>：第3章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>透视表格式</strong>：预设样式（带条带、强调）、数字格式（值字段设置）、列宽保持、空值显示——透视表外观与数字呈现控制。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】透视表格式像“报表的穿衣打扮”——“衣服”（样式）统一、“数字”（格式）规范，“见人”（汇报）有面子。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>样式可自定义并设默认。</li>
+<li>数字格式在值字段设置中指定。</li>
+<li>更新时保留格式需选项开启。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜结果输出：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 格式随刷新丢失。
+- 数字格式不统一。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：基础创建=“透视表 ABC”——数据规范+字段布局。</li>
+<li>【外部拓展延伸】专业衔接：检验台账透视（批次×项目）——入门即用。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 常见误区：数据源不规范——先清洗后透视。</p>
+</blockquote></div></article><article id="n37"><div class="md"><p>Excel2016数据透视表｜计算模型</p>
+<h1>Excel2016数据透视表｜GETPIVOTDATA函数</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜计算模型
+- <strong>对应原书页码</strong>：第7章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>GETPIVOTDATA函数</strong>：从透视表中按字段/项<strong>精确取值</strong>的函数——语法=GETPIVOTDATA(\“值字段", 透视表单元格, \”字段", \“项", ...)。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】GETPIVOTDATA像“透视表的精准取件码”——报出“柜号”（透视表）和“物品”（字段项），“精确取出”数值。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>随透视表更新自动调整。</li>
+<li>在透视表外引用其数据用。</li>
+<li>可关闭自动生成（选项）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜函数：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 参数项名不匹配。
+- 引用区域随布局失效。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n38"><div class="md"><p>Excel2016数据透视表｜交互分析模型</p>
+<h1>Excel2016数据透视表｜切片器</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜交互分析模型
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>切片器</strong>：可视化筛选按钮——点击即筛选、支持多选（Ctrl）、<strong>连接多张透视表</strong>实现联动，仪表板核心控件。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】切片器像“仪表板上的点播按钮”——点“华东”，所有关联图表报表“一起切换”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>插入→切片器→选字段。</li>
+<li>报表连接可控制联动范围。</li>
+<li>多选状态用“全选”切换。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜统计图形：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 切片器未连接目标表。
+- 样式与布局混乱。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n39"><div class="md"><p>Excel2016数据透视表｜交互分析模型</p>
+<h1>Excel2016数据透视表｜排序</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜交互分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>排序</strong>：按标签（文本/日期）或按<strong>值</strong>（汇总结果）对透视表行/列排序——如销售额降序、手动拖拽自定义次序。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】排序像“给透视结果排队”——“谁第一”（值排序）一目了然，“谁在前”（手动）由你定。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>值排序与源表排序无关。</li>
+<li>手动排序在更多排序选项中。</li>
+<li>排序随刷新保留。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据排序：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 在源表排序期望透视表变。
+- 自定义次序不设置。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n40"><div class="md"><p>Excel2016数据透视表｜交互分析模型</p>
+<h1>Excel2016数据透视表｜日程表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜交互分析模型
+- <strong>对应原书页码</strong>：第5章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>日程表</strong>：<strong>日期字段</strong>专用的区间筛选控件——按月/季/年切换、拖选日期段、与切片器并用。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】日程表像“时间轴上的选区器”——“拉”（拖选）一段“时间”，透视表“只显示那一段”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>字段必须为日期类型。</li>
+<li>级别（年/季/月）可切换。</li>
+<li>可设清除筛选按钮。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜日期处理：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 非日期字段用日程表。
+- 日期格式不识别。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n41"><div class="md"><p>Excel2016数据透视表｜交互分析模型</p>
+<h1>Excel2016数据透视表｜筛选</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜交互分析模型
+- <strong>对应原书页码</strong>：第4章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>筛选</strong>：行/列标签筛选（等于、包含、开头是）、<strong>值筛选</strong>（大于、前N项）、报表筛选区——按条件缩减透视范围。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】筛选像“透视的漏斗”——“只留”（筛选）需要的“段”，“漏斗”口径变了“结果”跟着变。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>标签筛选针对字段值。</li>
+<li>值筛选针对聚合结果。</li>
+<li>报表筛选区字段在表上方。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜筛选：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 筛选与切片器功能混淆。
+- 筛选后总行范围误解。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n42"><div class="md"><p>Excel2016数据透视表｜计算模型</p>
+<h1>Excel2016数据透视表｜计算字段</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜计算模型
+- <strong>对应原书页码</strong>：第6章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>计算字段</strong>：在透视表内基于<strong>字段</strong>定义的公式（如“利润率=利润/销售额”）——在聚合结果上计算，随透视变化更新。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】计算字段像“聚合后的公式列”——先“汇总”（字段聚合）再“计算”（公式），结果随筛选刷新。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>公式引用字段名。</li>
+<li>在聚合后的值上运算。</li>
+<li>不能引用其他计算字段（部分版本限制）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜计算变量：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 把计算字段当源表列。
+- 公式字段名拼写错误。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n43"><div class="md"><p>Excel2016数据透视表｜计算模型</p>
+<h1>Excel2016数据透视表｜计算项</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜计算模型
+- <strong>对应原书页码</strong>：第6章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>计算项</strong>：在字段<strong>内部</strong>基于若干项定义的公式（如“差值=本期-上期”）——仅对该字段的部分项运算。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】计算项像“字段内部的算术”——“本月”减“上月”，只算“这两个格子”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>作用于字段内的项。</li>
+<li>与计算字段作用层级不同。</li>
+<li>求解次序影响多公式结果。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜计算变量：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 计算项与计算字段混淆。
+- 求解次序未检查。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：交互分析=“动态分析”——切片器/组合/钻取。</li>
+<li>【外部拓展延伸】专业衔接：多维度钻取（品类/时间）——管理报表标配。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：仪表盘练习——切片器联动是核心。</p>
+</blockquote></div></article><article id="n44"><div class="md"><p>Excel2016数据透视表｜多源数据模型</p>
+<h1>Excel2016数据透视表｜MicrosoftQuery</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜多源数据模型
+- <strong>对应原书页码</strong>：第10章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>Microsoft Query</strong>：Excel内置的可视化查询工具——通过<strong>ODBC</strong>连接外部数据库（Access、SQL Server等），拖拽选字段生成查询。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】Microsoft Query像“Excel与数据库的翻译官”——“选表选字段”（可视化）自动翻译成“数据库话”（SQL）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>适用于中小数据量交互查询。</li>
+<li>自动生成SQL可查看修改。</li>
+<li>数据可返回Excel做透视。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件建立：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 大数据量用Query（慢）。
+- ODBC驱动缺失。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展=“数据整合”——多表/关系/PowerPivot。</li>
+<li>【外部拓展延伸】专业衔接：多表关联——机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：专家技能——循序渐进。</p>
+</blockquote></div></article><article id="n45"><div class="md"><p>Excel2016数据透视表｜多源数据模型</p>
+<h1>Excel2016数据透视表｜OLEDB</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜多源数据模型
+- <strong>对应原书页码</strong>：第11章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>OLE DB</strong>：面向数据提供者的连接接口——用<strong>连接字符串</strong>+SQL语句直接取数，适合大数据量与复杂查询，性能优于Query。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】OLE DB像“数据库的直达专线”——不“绕”（可视化向导），“直报”（连接串+SQL）目的地，大“货”（数据）也“快”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>连接字符串指定提供者与数据源。</li>
+<li>SQL语句可取数/聚合。</li>
+<li>支持定时刷新。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件建立：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 连接串写错。
+- SQL未优化导致慢。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展=“数据整合”——多表/关系/PowerPivot。</li>
+<li>【外部拓展延伸】专业衔接：多表关联——机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：专家技能——循序渐进。</p>
+</blockquote></div></article><article id="n46"><div class="md"><p>Excel2016数据透视表｜多源数据模型</p>
+<h1>Excel2016数据透视表｜PowerPivot</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜多源数据模型
+- <strong>对应原书页码</strong>：第12章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>Power Pivot</strong>：内存<strong>数据模型</strong>引擎——在Excel内建多表关系、用<strong>DAX</strong>公式定义度量值、处理百万行级大数据。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】Power Pivot像“Excel里的数据仓库”——多张表“关联”（关系）入库，“指标”（DAX度量）随取随用。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>列存储压缩，大数据量内存中分析。</li>
+<li>表关系取代VLOOKUP。</li>
+<li>度量值用DAX（SUMX、CALCULATE等）。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据模型：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 把Power Pivot当普通表。
+- DAX上下文理解错误。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展=“数据整合”——多表/关系/PowerPivot。</li>
+<li>【外部拓展延伸】专业衔接：多表关联——机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：专家技能——循序渐进。</p>
+</blockquote></div></article><article id="n47"><div class="md"><p>Excel2016数据透视表｜动态数据模型</p>
+<h1>Excel2016数据透视表｜动态数据源</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜动态数据模型
+- <strong>对应原书页码</strong>：第8章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>动态数据源</strong>：随数据增加自动扩展的数据源区域——通过<strong>表对象</strong>（Ctrl+T）或<strong>定义名称</strong>（OFFSET+COUNTA）实现。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】动态数据源像“会生长的数据筐”——“筐”（区域）随“菜”（数据）增多“自动变大”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>表对象：结构化引用，刷新自动含新行。</li>
+<li>OFFSET名称：COUNT计算末行动态定位。</li>
+<li>透视表创建时引用名称。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件操作：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 静态区域不更新。
+- OFFSET公式行数算错。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展=“数据整合”——多表/关系/PowerPivot。</li>
+<li>【外部拓展延伸】专业衔接：多表关联——机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：专家技能——循序渐进。</p>
+</blockquote></div></article><article id="n48"><div class="md"><p>Excel2016数据透视表｜多源数据模型</p>
+<h1>Excel2016数据透视表｜复合范围</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜多源数据模型
+- <strong>对应原书页码</strong>：第9章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>复合范围</strong>：多张结构相同的表（如各月数据）合并创建透视表——用<strong>数据透视表向导</strong>（Alt+D+P）的“多重合并计算区域”。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】复合范围像“多个月账本的合订本”——结构相同“叠”一起，自动生成“月份”页字段区分来源。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>各表字段名必须一致。</li>
+<li>生成“页字段”标识来源表。</li>
+<li>向导入口：Alt+D+P。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据拆分合并：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 字段名不一致导致错位。
+- 忘记识别页字段。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：数据源扩展=“数据整合”——多表/关系/PowerPivot。</li>
+<li>【外部拓展延伸】专业衔接：多表关联——机构数据管理进阶。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 局限提示：专家技能——循序渐进。</p>
+</blockquote></div></article><article id="n49"><div class="md"><p>Excel2016数据透视表｜高级自动化模型</p>
+<h1>Excel2016数据透视表｜VBA</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜高级自动化模型
+- <strong>对应原书页码</strong>：第17章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>VBA</strong>：Excel宏编程语言——通过<strong>PivotCache/PivotTable对象</strong>批量创建、刷新、修改透视表，实现报表自动化。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】VBA像“透视表的遥控器”——录制“按键”（宏）或手写“程序”（代码），批量“遥控”所有透视表。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>录制宏是入门捷径。</li>
+<li>PivotTables集合遍历工作表。</li>
+<li>RefreshTable刷新单个透视表。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜语法窗口：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 引用对象错误。
+- 宏安全限制运行。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级应用=“计算与自动化”——计算字段/宏/Power Query。</li>
+<li>【外部拓展延伸】专业衔接：指标计算+报表自动化——提效利器。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：描述统计计算——日常统计工具。</p>
+</blockquote></div></article><article id="n50"><div class="md"><p>Excel2016数据透视表｜高级自动化模型</p>
+<h1>Excel2016数据透视表｜打印设置</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜高级自动化模型
+- <strong>对应原书页码</strong>：第18章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>打印设置</strong>：透视表打印的页面设置——<strong>打印标题行</strong>（多页重复）、分页控制、打印区域、缩放打印。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】打印设置像“报表的装订规范”——每页“抬头”（标题）都有、“分页”（边界）不“腰斩”行。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>顶端标题行：页面布局→打印标题。</li>
+<li>分页预览拖拽分页符。</li>
+<li>打印区域控制范围。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜结果输出：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 标题行不重复。
+- 行被分页截断。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级应用=“计算与自动化”——计算字段/宏/Power Query。</li>
+<li>【外部拓展延伸】专业衔接：指标计算+报表自动化——提效利器。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：描述统计计算——日常统计工具。</p>
+</blockquote></div></article><article id="n51"><div class="md"><p>Excel2016数据透视表｜高级自动化模型</p>
+<h1>Excel2016数据透视表｜透视表图表</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜高级自动化模型
+- <strong>对应原书页码</strong>：第15章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>透视表图表</strong>：绑定透视表数据的动态图表（数据透视图）——随透视表筛选/切片器<strong>同步更新</strong>，适合动态仪表板。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】透视表图表像“透视数据的镜子”——“镜子”（图表）映“人”（透视表），“人”变“影”即变。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>图表字段与透视表联动。</li>
+<li>切换图表类型（柱形、折线等）。</li>
+<li>切片器可直接连接图表。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜统计图形：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 图表与透视表断连。
+- 类型选择不匹配数据。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：高级应用=“计算与自动化”——计算字段/宏/Power Query。</li>
+<li>【外部拓展延伸】专业衔接：指标计算+报表自动化——提效利器。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 高数衔接：描述统计计算——日常统计工具。</p>
+</blockquote></div></article><article id="n52"><div class="md"><p>Excel2016数据透视表｜综合实战模型</p>
+<h1>Excel2016数据透视表｜SQL基础</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜综合实战模型
+- <strong>对应原书页码</strong>：附录A</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>SQL基础</strong>：结构化查询语言——<strong>SELECT</strong>（查询）、<strong>WHERE</strong>（过滤）、<strong>GROUP BY</strong>（分组聚合）、<strong>ORDER BY</strong>（排序）、<strong>JOIN</strong>（多表连接），用于外部数据源取数。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】SQL基础像“数据库的取货指令”——“拿什么”（SELECT）“从哪”（FROM）“什么条件”（WHERE）“怎么分组”（GROUP BY）。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>SELECT 字段 FROM 表 WHERE 条件。</li>
+<li>GROUP BY 后接聚合函数。</li>
+<li>JOIN 指定连接条件。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜数据文件建立：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- WHERE与HAVING混淆。
+- 聚合函数与分组字段不匹配。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：综合实战=“报表集成”——全流程仪表盘。</li>
+<li>【外部拓展延伸】专业衔接：质量月报——标准报表形态。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：实战复现——成长捷径。</p>
+</blockquote></div></article><article id="n53"><div class="md"><p>Excel2016数据透视表｜综合实战模型</p>
+<h1>Excel2016数据透视表｜综合应用</h1>
+<blockquote>
+<p><strong>元信息</strong> 元信息
+- <strong>所属模型</strong>：Excel2016数据透视表｜综合实战模型
+- <strong>对应原书页码</strong>：第19-23章</p>
+</blockquote>
+<hr />
+<h2>标准定义</h2>
+<p><strong>综合应用</strong>：全书方法组合的真实案例——销售分析、人事统计、财务汇总、多表合并+计算字段+切片器+图表+VBA的完整方案。</p>
+<h2>直觉解释</h2>
+<p>【外部拓展延伸】综合应用像“透视表的毕业设计”——从“数据”到“洞察”到“呈现”，全功能链“走一遍”。</p>
+<h2>核心性质与结论</h2>
+<ul>
+<li>案例覆盖各行业场景。</li>
+<li>方法组合按需求裁剪。</li>
+<li>常见问题（刷新、性能）一并解决。</li>
+</ul>
+<h2>相关概念</h2>
+<ul>
+<li>SPSS统计分析｜综合案例分析：同主题-平行</li>
+</ul>
+<h2>常见误区</h2>
+<p>【外部拓展延伸】
+- 生搬硬套案例模板。
+- 忽略性能优化。</p>
+<h2>要点深挖与专业视角（本迭代）</h2>
+<blockquote>
+<p>[!note] 本轮深挖（服务于食品检验检测技术专业 新生→在校→上岗→初/中/高级工→技师/专家 成长主线，标注【外部拓展延伸】）</p>
+</blockquote>
+<ul>
+<li>【外部拓展延伸】模块深挖：综合实战=“报表集成”——全流程仪表盘。</li>
+<li>【外部拓展延伸】专业衔接：质量月报——标准报表形态。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong> 学习建议：实战复现——成长捷径。</p>
+</blockquote></div></article></main></body></html>
